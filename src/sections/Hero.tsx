@@ -1,0 +1,13 @@
+import type { HeroProps } from '../types/hero'
+import { Section } from '../components/layout/Section'
+import { Navbar } from '../components/layout/Navbar'
+import { LOGO_TEXT } from '../data/hero'
+import { PageFooter } from '../components/layout/PageFooter'
+
+export const Hero = ({ id }: HeroProps) => (
+  <Section id={id} className="bg-primary-600 h-screen flex">
+    <Navbar logoText={LOGO_TEXT} month={new Date().getMonth()} year={new Date().getFullYear()} />
+    {/* <img src={profile} alt="profile picture" className="grayscale shadow-lg" /> */}
+    <PageFooter currentPage={1}></PageFooter>
+  </Section>
+)
