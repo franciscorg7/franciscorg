@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -12,4 +13,10 @@
   --color-primary-800: #055987;
   --color-primary-900: #0a4a70;
   --color-primary-950: #072f4a;
+}
+
+@layer theme {
+  .font-title {
+    font-family: var(--tw-font-title, 'Barriecito', 'cursive');
+  }
 }

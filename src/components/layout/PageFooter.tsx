@@ -11,9 +11,9 @@ export const PageFooter = ({ currentPage, className = '' }: PageFooterProps) => 
       `}
     >
       <div className="flex justify-end items-end h-full px-8 py-6">
-        <div className="font-mono tracking-widest pointer-events-none text-primary-300">
+        <span className="font-mono text-xl tracking-widest pointer-events-none text-primary-300">
           {currentPage.toString().padStart(2, '0')}
-        </div>
+        </span>
       </div>
     </footer>
   )
