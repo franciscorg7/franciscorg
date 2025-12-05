@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react'
-
 export interface ProjectsProps {
   id: string
   page: number
@@ -8,7 +6,7 @@ export interface ProjectsProps {
 export interface ProjectsWindowProps {
   className?: string
   title: string
-  children: ReactNode
+  projects: ProjectProps[]
 }
 
 export interface ProjectProps {
@@ -20,7 +18,7 @@ export interface ProjectProps {
   date: string
 }
 
-export interface ProjectDialogProps {
-  project: ProjectProps
-  children: ReactNode
+export interface ProjectsWindowContext {
+  selectedProject: ProjectProps | null
+  selectProject: (project: ProjectProps | null) => void
 }
