@@ -9,6 +9,8 @@ export const MonthYearDisplay = ({ className, month, year, locale = 'en-US' }: M
   }).format(date)
 
   return (
-    <time className={className} dateTime={`${year}-${(month + 1).toString().padStart(2, '0')}-01`}>{formattedDate}</time>
+    <time className={className} dateTime={`${year}-${(month + 1).toString().padStart(2, '0')}-01`}>
+      {formattedDate}
+    </time>
   )
 }
