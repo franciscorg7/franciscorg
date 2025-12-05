@@ -19,3 +19,8 @@ export interface ProjectProps {
   company: string
   date: string
 }
+
+export interface ProjectDialogProps {
+  project: ProjectProps
+  children: ReactNode
+}
