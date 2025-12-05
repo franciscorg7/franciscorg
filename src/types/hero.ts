@@ -7,3 +7,15 @@ export interface NavbarProps {
   month: number
   year: number
 }
+
+export interface TrafficLightProps {
+  type: TrafficLightType
+}
+
+export const TrafficLightColor = {
+  RED: 'red',
+  YELLOW: 'yellow',
+  GREEN: 'green',
+}
+
+export type TrafficLightType = (typeof TrafficLightColor)[keyof typeof TrafficLightColor]
