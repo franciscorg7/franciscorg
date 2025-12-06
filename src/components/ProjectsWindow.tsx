@@ -1,9 +1,14 @@
+import { useProjectContext } from '../context/ProjectContext'
 import { TrafficLightColor } from '../types/hero'
 import type { ProjectsWindowProps } from '../types/projects'
-import { Project } from './Project'
+import { ProjectDetails } from './ProjectDetails'
+import ProjectList from './ProjectList'
 import { TrafficLight } from './TrafficLight'
 
 export const ProjectsWindow = (params: ProjectsWindowProps) => {
+  const { selectedProjectId, setSelectedProject, clearProject } = useProjectContext()
+  const selectedProject = params.projects.find(proj => proj.id === selectedProjectId)
+
   return (
     <div className="bg-white rounded-xl shadow-xl overflow-hidden w-full">
       <div className="flex items-center justify-between h-8 px-3 bg-gray-800 border-b border-gray-300">
@@ -17,11 +22,11 @@ export const ProjectsWindow = (params: ProjectsWindowProps) => {
         </div>
         <div className="w-8"></div>
       </div>
-      <div className="flex gap-6 flex-wrap p-6 overflow-y-auto max-h-[80vh]">
-        {params.projects.map(proj => (
-          <Project key={proj.id} {...proj}></Project>
-        ))}
-      </div>
+      {selectedProject ? (
+        <ProjectDetails project={selectedProject} onBack={clearProject} />
+      ) : (
+        <ProjectList projects={params.projects} onSelectProject={setSelectedProject}></ProjectList>
+      )}
     </div>
   )
 }
