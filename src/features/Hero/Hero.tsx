@@ -1,7 +1,7 @@
-import type { HeroProps } from '../types/hero'
-import { Section } from '../components/layout/Section'
-import { Navbar } from '../components/layout/Navbar'
-import { LOGO_LABEL, PORTFOLIO_LABEL } from '../data/hero'
+import type { HeroProps } from '../../types/hero'
+import { Section } from '../../layout/Section'
+import { Navbar } from '../../layout/Navbar'
+import { LOGO_LABEL, PORTFOLIO_LABEL } from '../../data/hero'
 
 export const Hero = ({ id }: HeroProps) => (
   <Section id={id} contentClass="bg-primary-600 h-screen flex flex-col justify-between">

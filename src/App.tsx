@@ -1,8 +1,8 @@
-import { Layout } from './components/layout/Layout'
-import { AboutMe } from './sections/AboutMe'
+import { Layout } from './layout/Layout'
+import { AboutMe } from './features/AboutMe/AboutMe'
 import { Competences } from './sections/Competences'
-import { Hero } from './sections/Hero'
-import { Projects } from './sections/Projects'
+import { Hero } from './features/Hero/Hero'
+import { Projects } from './features/Projects/Projects'
 
 export function App() {
   return (

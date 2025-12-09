@@ -1,5 +1,5 @@
-import { PageFooter } from '../components/layout/PageFooter'
-import { Section } from '../components/layout/Section'
+import { PageFooter } from '../layout/PageFooter'
+import { Section } from '../layout/Section'
 import { COMPETENCES_TITLE } from '../data/competences'
 import type { CompetencesProps } from '../types/competences'
 

@@ -1,5 +1,5 @@
-import { MonthYearDisplay } from '../../shared/components/MonthYear'
-import type { NavbarProps } from '../../types/hero'
+import { MonthYearDisplay } from '../shared/components/MonthYear'
+import type { NavbarProps } from '../types/hero'
 
 export const Navbar = ({ logoText, month, year }: NavbarProps) => (
   <nav className="flex justify-between items-center w-full">

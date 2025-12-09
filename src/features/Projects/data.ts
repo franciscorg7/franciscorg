@@ -1,4 +1,4 @@
-import type { ProjectProps } from '../types/projects'
+import type { ProjectProps } from './types'
 
 export const PROJECTS_TITLE = 'PROJECTS'
 export const PROJECTS_WINDOW_TITLE = 'projects'

@@ -1,4 +1,8 @@
-import { TrafficLightColor, type TrafficLightProps, type TrafficLightType } from '../types/hero'
+import {
+  TrafficLightColor,
+  type TrafficLightProps,
+  type TrafficLightType,
+} from '../../../types/hero'
 
 const colorMap: Record<TrafficLightType, string> = {
   [TrafficLightColor.RED]: 'bg-red-500',

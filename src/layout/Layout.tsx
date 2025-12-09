@@ -1,4 +1,4 @@
-import type { LayoutProps } from '../../types/layout'
+import type { LayoutProps } from '../types/layout'
 
 export const Layout = ({ children }: LayoutProps) => (
   <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">

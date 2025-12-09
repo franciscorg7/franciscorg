@@ -1,8 +1,8 @@
-import { PageFooter } from '../components/layout/PageFooter'
-import { Section } from '../components/layout/Section'
-import { ABOUT_ME_TEXT, ABOUT_ME_TITLE } from '../data/about-me'
-import type { AboutMeProps } from '../types/about-me'
-import profile from '../assets/profile.jpg'
+import { PageFooter } from '../../layout/PageFooter'
+import { Section } from '../../layout/Section'
+import { ABOUT_ME_TEXT, ABOUT_ME_TITLE } from './data'
+import type { AboutMeProps } from '../../types/about-me'
+import profile from '../../assets/profile.jpg'
 
 export const AboutMe = ({ id }: AboutMeProps) => (
   <Section id={id} title={ABOUT_ME_TITLE} contentClass="bg-secondary-100 justify-between">
