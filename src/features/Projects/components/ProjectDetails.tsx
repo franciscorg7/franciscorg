@@ -1,4 +1,4 @@
-import type { ProjectProps } from '../projects'
+import type { ProjectProps } from '../types'
 
 interface ProjectDetailsProps {
   project: ProjectProps

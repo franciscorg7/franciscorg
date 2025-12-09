@@ -1,9 +1,9 @@
 import { useProjectContext } from '../context/ProjectContext'
 import { TrafficLightColor } from '../../../types/hero'
-import type { ProjectsWindowProps } from '../projects'
 import { ProjectDetails } from './ProjectDetails'
 import ProjectList from './ProjectList'
 import { TrafficLight } from './TrafficLight'
+import type { ProjectsWindowProps } from '../types'
 
 export const ProjectsWindow = (params: ProjectsWindowProps) => {
   const { selectedProjectId, setSelectedProject, clearProject } = useProjectContext()

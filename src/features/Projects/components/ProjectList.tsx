@@ -1,5 +1,5 @@
+import type { ProjectProps } from '../types'
 import { Project } from './Project'
-import type { ProjectProps } from '../projects'
 
 interface ProjectListProps {
   projects: ProjectProps[]
