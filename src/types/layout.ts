@@ -7,7 +7,8 @@ export interface LayoutProps {
 export interface SectionProps {
   id: string
   title?: string
-  className?: string
+  titleClass?: string
+  contentClass?: string
   children: ReactNode
 }
 

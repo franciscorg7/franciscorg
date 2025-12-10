@@ -1,4 +1,4 @@
-import type { PageFooterProps } from '../../types/layout'
+import type { PageFooterProps } from '../types/layout'
 
 export const PageFooter = ({ currentPage, className = '' }: PageFooterProps) => {
   return (
