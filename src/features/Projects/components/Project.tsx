@@ -6,9 +6,7 @@ export const Project = ({ onSelectProject, ...props }: ProjectProps) => {
   return (
     <div
       className="flex flex-col items-center w-min cursor-pointer"
-      onClick={() => {
-        onSelectProject && onSelectProject(props.id)
-      }}
+      onClick={() => onSelectProject(props.id)}
     >
       <FontAwesomeIcon icon={faFolder} className="text-8xl text-primary-700" />
       <div>{props.title}</div>

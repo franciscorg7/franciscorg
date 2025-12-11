@@ -10,7 +10,7 @@ export interface ProjectProps {
   stack: ProjectStackType[]
   company: string
   date: string
-  onSelectProject?: (projectId: string) => void
+  onSelectProject: (projectId: string) => void
 }
 
 export interface ProjectsWindowContext {
