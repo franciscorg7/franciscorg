@@ -1,5 +1,5 @@
+import type { ProjectType } from '../types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { ProjectProps } from '../types'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { ProjectStackDisplay } from './ProjectStackDisplay'
 import { useTranslation } from 'react-i18next'
@@ -7,7 +7,7 @@ import { ProjectsTranslationKey, RootTranslationKey } from '../../../config/tran
 import { formatNewlines } from '../../../utils/formatNewLines'
 
 interface ProjectDetailsProps {
-  project: ProjectProps
+  project: ProjectType
   onBack: () => void
 }
 

@@ -1,12 +1,12 @@
 import { useProjectContext } from '../context/ProjectContext'
 import { ProjectDetails } from './ProjectDetails'
 import ProjectList from './ProjectList'
-import type { ProjectProps } from '../types'
+import type { ProjectType } from '../types'
 import { ProjectsWindowHeader } from './ProjectsWindowHeader'
 
 interface ProjectsWindowProps {
   title: string
-  projects: ProjectProps[]
+  projects: ProjectType[]
 }
 
 export const ProjectsWindow = ({ title, projects }: ProjectsWindowProps) => {

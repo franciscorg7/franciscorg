@@ -1,8 +1,8 @@
-import type { ProjectProps } from '../types'
+import type { ProjectType } from '../types'
 import { Project } from './Project'
 
 interface ProjectListProps {
-  projects: ProjectProps[]
+  projects: ProjectType[]
   onSelectProject: (id: string) => void
 }
 

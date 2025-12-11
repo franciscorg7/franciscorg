@@ -1,10 +1,10 @@
 import { ProjectsTranslationKey } from '../../config/translation-keys'
-import { ProjectStack, type ProjectProps } from './types'
+import { ProjectStack, type ProjectType } from './types'
 
 export const PROJECTS_TITLE = 'PROJECTS'
 export const PROJECTS_WINDOW_TITLE = 'projects'
 
-export const projects: ProjectProps[] = [
+export const projects: ProjectType[] = [
   {
     id: 'pop',
     title: 'Private Banking',

@@ -2,10 +2,14 @@ import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
 import { ProjectsWindow } from './components/ProjectsWindow'
 import { ProjectProvider } from './context/ProjectContext'
-import type { ProjectsProps } from './types'
 import { projects, PROJECTS_WINDOW_TITLE } from './data'
 import { useTranslation } from 'react-i18next'
 import { ProjectsTranslationKey, RootTranslationKey } from '../../config/translation-keys'
+
+interface ProjectsProps {
+  id: string
+  page: number
+}
 
 export const Projects = ({ id, page }: ProjectsProps) => {
   const { t } = useTranslation(RootTranslationKey.PROJECTS)

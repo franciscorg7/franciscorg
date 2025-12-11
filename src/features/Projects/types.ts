@@ -1,15 +1,13 @@
-export interface ProjectsProps {
-  id: string
-  page: number
-}
-
-export interface ProjectProps {
+export type ProjectType = {
   id: string
   title: string
   description: string
   stack: ProjectStackType[]
   company: string
   date: string
+}
+
+export interface ProjectProps extends ProjectType {
   onSelectProject: (projectId: string) => void
 }
 
