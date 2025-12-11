@@ -1,0 +1,18 @@
+{
+  "title": "PROJECTS",
+  "details": {
+    "back": "Back",
+    "stack": "Technology Stack"
+  },
+  "project": {
+    "bioma": {
+      "description": "Durante minha permanência na Inova+, atuei como Desenvolvedor Full-Stack central no projeto BIOMA, focado na criação de uma solução digital centralizada para gerenciar e rastrear a sustentabilidade e a conformidade operacional em toda a complexa cadeia de valor agroalimentar.\nFui responsável pelo desenvolvimento end-to-end, trabalhando em estreita colaboração com o cliente para implementar um sistema personalizado. No frontend, utilizei Angular para construir uma Single Page Application (SPA) responsiva, implementando formulários reativos complexos e painéis dinâmicos de visualização de dados para insights dos stakeholders. No lado do serviço, desenvolvi e protegi a API RESTful usando Node.js, com foco na modelagem eficiente de dados e na garantia de alta integridade de dados para toda a logística da cadeia de suprimentos.\nEsta experiência proporcionou oportunidades contínuas e práticas para dominar o ecossistema completo de desenvolvimento JavaScript (Angular/Node.js), traduzindo com sucesso as necessidades de negócio em uma solução técnica robusta e escalável que otimizou o gerenciamento de recursos e os relatórios de sustentabilidade."
+    },
+    "pos": {
+      "description": "Atuei como Desenvolvedor Frontend essencial no Ponto de Venda (POS) para o sistema de bilhética da Ticketline, uma plataforma crítica utilizada para a venda de ingressos em eventos e locais físicos.\nMinha responsabilidade principal foi o desenvolvimento da interface de usuário completa utilizando React. Para gerenciar o estado complexo e dinâmico das transações (como seleção de assentos, gestão de carrinho e status de pagamento), foi crucial a utilização do Redux, garantindo previsibilidade e rastreabilidade nas operações de venda de alto volume. O projeto exigiu a criação de um sistema robusto e rápido para processar transações em tempo real, desde a seleção de assentos até a emissão instantânea de bilhetes.\nEsta experiência aprofundou minha proficiência em React e na gestão de estados complexos de interface com Redux, e despertou um grande entusiasmo pela área da bilhética. Pude contribuir para uma solução crucial em ambientes de venda de alto volume e sensíveis ao tempo, tornando a experiência de trabalho muito gratificante."
+    },
+    "pemp": {
+      "description": "Fui um contribuidor chave no desenvolvimento de um novo sistema de crédito em larga escala para um dos principais bancos de Portugal (CGD). A minha função, além do desenvolvimento, estendeu-se à gestão de releases e à mentoria de elementos juniores da equipa, garantindo tanto a qualidade do código quanto o crescimento da equipa.\nTecnicamente, integrei módulos frontend Angular com o backend Java via APIs RESTful e fui responsável pelo desenvolvimento de funcionalidades complexas de core banking:\nMódulo de Sobrescrita de Limites (Limits Override): Configurei propriedades quantitativas (e.g., montantes, garantias) numa estrutura de árvore hierárquica, assegurando validação em tempo real de limites e relações de produtos.\nMódulo de Gestão Documental: Construí funcionalidades para importação, categorização, assinatura e gestão de documentos essenciais de crédito, incluindo filtros e previews.\nGaranti a consistência e a qualidade do código contribuindo para uma biblioteca de componentes partilhada (documentada via Storybook), escrevendo testes unitários abrangentes (Jasmine/Karma), e desempenhando um papel ativo na coordenação dos lançamentos para produção."
+    }
+  }
+}
