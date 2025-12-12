@@ -1,13 +1,18 @@
 export const RootTranslationKey = {
   COMMON: 'common',
   HERO: 'hero',
-  ABOUTME: 'aboutMe',
+  ABOUT_ME: 'about-me',
   PROJECTS: 'projects',
 } as const
 
 export const HeroTranslationKey = {
   LOGO: 'logo',
   TITLE: 'title',
+} as const
+
+export const AboutMeTranslationKey = {
+  TITLE: 'title',
+  DESCRIPTION: 'description',
 } as const
 
 export const ProjectsTranslationKey = {

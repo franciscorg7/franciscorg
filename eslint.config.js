@@ -10,11 +10,12 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: ['eslint.config.js'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
-        project: true,
         tsconfigRootDir: import.meta.dirname,
         project: ['./tsconfig.json', './tsconfig.app.json'],
       },
@@ -26,6 +27,7 @@ export default tseslint.config(
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
+    ignores: ['eslint.config.js'],
     plugins: {
       react: pluginReact,
       'react-hooks': pluginReactHooks,

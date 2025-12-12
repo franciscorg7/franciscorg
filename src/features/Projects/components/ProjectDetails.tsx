@@ -15,7 +15,7 @@ export const ProjectDetails = ({ project, onBack }: ProjectDetailsProps) => {
   const { t } = useTranslation(RootTranslationKey.PROJECTS)
   return (
     <div className="flex flex-col gap-6 p-6">
-      <div className="flex items-center w-min cursor-pointer" onClick={onBack}>
+      <div className="flex items-center w-min cursor-pointer text-primary-800" onClick={onBack}>
         <FontAwesomeIcon icon={faChevronLeft} className="text-md" />
         <div>{t(ProjectsTranslationKey.DETAILS_BACK)}</div>
       </div>

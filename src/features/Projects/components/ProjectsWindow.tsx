@@ -14,7 +14,7 @@ export const ProjectsWindow = ({ title, projects }: ProjectsWindowProps) => {
   const selectedProject = projects.find(proj => proj.id === selectedProjectId)
 
   return (
-    <div className="flex flex-col grow w-full h-full bg-white rounded-xl shadow-xl overflow-hidden">
+    <div className="flex flex-col grow lg:w-full 2xl:w-3/4 h-full bg-white rounded-xl shadow-xl overflow-hidden">
       <ProjectsWindowHeader id={selectedProjectId} title={title}></ProjectsWindowHeader>
       <div>
         {selectedProject ? (

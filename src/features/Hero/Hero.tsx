@@ -13,9 +13,8 @@ export const Hero = ({ id }: HeroProps) => {
         month={new Date().getMonth()}
         year={new Date().getFullYear()}
       />
-      {/* <img src={profile} alt="profile picture" className="grayscale shadow-lg" /> */}
-      <div className="flex justify-center items-center grow">
-        <span className="font-title text-white text-9xl">{t(HeroTranslationKey.TITLE)}</span>
+      <div className="flex justify-left items-end grow">
+        <span className="font-title text-white text-12xl w-1/2">{t(HeroTranslationKey.TITLE)}</span>
       </div>
     </Section>
   )

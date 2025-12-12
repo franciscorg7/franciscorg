@@ -25,6 +25,15 @@
   --color-secondary-800: #464646;
   --color-secondary-900: #3d3d3d;
   --color-secondary-950: #292929;
+
+  --text-10xl: 9rem;
+  --text-10xl--line-height: 1;
+  --text-11xl: 10rem;
+  --text-11xl--line-height: 1;
+  --text-12xl: 12rem;
+  --text-12xl--line-height: 1;
+  --text-huge: 14rem;
+  --text-huge--line-height: 1;
 }
 
 @layer theme {
