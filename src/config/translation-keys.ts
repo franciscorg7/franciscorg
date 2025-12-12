@@ -2,6 +2,7 @@ export const RootTranslationKey = {
   COMMON: 'common',
   HERO: 'hero',
   ABOUT_ME: 'about-me',
+  WORK_EXP: 'work-exp',
   PROJECTS: 'projects',
 } as const
 
@@ -13,6 +14,10 @@ export const HeroTranslationKey = {
 export const AboutMeTranslationKey = {
   TITLE: 'title',
   DESCRIPTION: 'description',
+} as const
+
+export const WorkExpTranslationKey = {
+  TITLE: 'title',
 } as const
 
 export const ProjectsTranslationKey = {

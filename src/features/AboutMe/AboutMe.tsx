@@ -9,24 +9,23 @@ export const AboutMe = ({ id }: AboutMeProps) => {
   const { t } = useTranslation(RootTranslationKey.ABOUT_ME)
 
   return (
-    <Section
-      id={id}
-      title={t(AboutMeTranslationKey.TITLE)}
-      contentClass="bg-secondary-100 justify-between"
-    >
-      <div className="flex grow h-full">
-        <div className="flex flex-1 justify-center">
-          <span className="pt-12">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+    <Section id={id} contentClass="bg-secondary-50 justify-between">
+      <div className="flex grow h-full gap-4">
+        <div className="flex flex-col flex-1">
+          <span className="font-title text-primary-700 text-9xl">
+            {t(AboutMeTranslationKey.TITLE)}
+          </span>
+          <span className="font-body text-xl pt-10">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
         </div>
-        <div className="flex flex-1 justify-center">
+        <div className="flex flex-2 justify-center items-center">
           <img
             src={profile}
             alt="profile picture"
-            className="grayscale rounded-full aspect-square object-cover h-120"
+            className="grayscale rounded-full aspect-square object-cover h-200"
           />
         </div>
       </div>
-      <PageFooter currentPage={2}></PageFooter>
+      <PageFooter currentPage={2} position="bottom-0 right-0"></PageFooter>
     </Section>
   )
 }

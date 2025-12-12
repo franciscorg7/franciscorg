@@ -1,17 +1,21 @@
-import type { PageFooterProps } from '../types/layout'
+interface PageFooterProps {
+  currentPage: number
+  position?: string // e.g. "top-0 right-0"
+  justify?: 'start' | 'center' | 'end'
+}
 
-export const PageFooter = ({ currentPage, className = '' }: PageFooterProps) => {
+export const PageFooter = ({ currentPage, position, justify = 'end' }: PageFooterProps) => {
   return (
     <footer
       className={`
-        absolute bottom-0 left-0 w-full z-10 
+         ${position}
+        absolute w-full z-10 
         pointer-events-none 
-        text-white text-opacity-50 text-sm 
-        ${className}
+        text-black opacity-5 text-sm 
       `}
     >
-      <div className="flex justify-end items-end h-full px-8 py-6">
-        <span className="font-mono text-3xl tracking-widest pointer-events-none text-primary-300">
+      <div className={`flex justify-${justify} items-end h-full px-8 py-6`}>
+        <span className="font-mono text-8xl tracking-widest pointer-events-none">
           {currentPage.toString().padStart(2, '0')}
         </span>
       </div>

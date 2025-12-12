@@ -22,7 +22,7 @@ export const Projects = ({ id, page }: ProjectsProps) => {
       <ProjectProvider>
         <ProjectsWindow title={PROJECTS_WINDOW_TITLE} projects={projects}></ProjectsWindow>
       </ProjectProvider>
-      <PageFooter currentPage={page}></PageFooter>
+      <PageFooter currentPage={page} position="bottom-0 right-0"></PageFooter>
     </Section>
   )
 }

@@ -20,6 +20,7 @@ i18n
       RootTranslationKey.COMMON,
       RootTranslationKey.HERO,
       RootTranslationKey.ABOUT_ME,
+      RootTranslationKey.WORK_EXP,
       RootTranslationKey.PROJECTS,
     ],
     defaultNS: RootTranslationKey.COMMON,
