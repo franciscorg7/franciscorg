@@ -4,6 +4,8 @@ import type { AboutMeProps } from '../../types/about-me'
 import profile from '../../assets/profile.jpg'
 import { AboutMeTranslationKey, RootTranslationKey } from '../../config/translation-keys'
 import { useTranslation } from 'react-i18next'
+import { CompetenceTag } from './components/CompetenceTag'
+import { competences } from './data'
 
 export const AboutMe = ({ id }: AboutMeProps) => {
   const { t } = useTranslation(RootTranslationKey.ABOUT_ME)
@@ -16,6 +18,13 @@ export const AboutMe = ({ id }: AboutMeProps) => {
             {t(AboutMeTranslationKey.TITLE)}
           </span>
           <span className="font-body text-xl pt-10">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+          {competences.map(competence => (
+            <CompetenceTag
+              key={competence.id}
+              label={t(competence.translationKey)}
+              className={competence.className}
+            ></CompetenceTag>
+          ))}
         </div>
         <div className="flex flex-2 justify-center items-center">
           <img

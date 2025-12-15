@@ -1,3 +1,20 @@
-export const ABOUT_ME_TITLE = 'ABOUT ME'
-export const ABOUT_ME_TEXT =
-  'Always learning and always creating. I bring a developer’s mindset shaped by curiosity and organized execution, paired with a leader’s ability to transform complexity into clarity. My focus is on creating reliable and scalable solutions while empowering teams, aligning stakeholders and driving delivery with compromise and collaboration.'
+import { AboutMeTranslationKey } from '../../config/translation-keys'
+import type { CompetenceItem } from './types'
+
+export const competences: CompetenceItem[] = [
+  {
+    id: 'frontend',
+    translationKey: AboutMeTranslationKey.COMPETENCES_FRONTEND,
+    className: 'bg-blue-200 text-blue-800',
+  },
+  {
+    id: 'team-mentoring',
+    translationKey: AboutMeTranslationKey.COMPETENCES_TEAM_MENTORING,
+    className: 'bg-green-200 text-green-800',
+  },
+  {
+    id: 'delivery-ownership',
+    translationKey: AboutMeTranslationKey.COMPETENCES_DELIVERY_OWNERSHIP,
+    className: 'bg-yellow-200 text-yellow-800',
+  },
+]

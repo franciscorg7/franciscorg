@@ -1,4 +1,9 @@
 {
   "title": "SOBRE MIM",
-  "description": "Sempre a aprender e sempre a criar. Entrego uma mentalidade moldada por curiosidade e organização, combinada com a capacidade de liderança para transformar complexidade de requisitos em objetividade. O meu foco está na criação de soluções robustas e escaláveis, dando o apoio necessário a equipas, alinhando stakeholders e assegurando entregas com compromisso e colaboração."
+  "description": "Sempre a aprender e sempre a criar. Entrego uma mentalidade moldada por curiosidade e organização, combinada com a capacidade de liderança para transformar complexidade de requisitos em objetividade. O meu foco está na criação de soluções robustas e escaláveis, dando o apoio necessário a equipas, alinhando stakeholders e assegurando entregas com compromisso e colaboração.",
+  "competences": {
+    "frontend": "Frontend Development",
+    "team_mentoring": "Mentoria de Equipas",
+    "delivery_ownership": "Delivery Ownership"
+  }
 }
