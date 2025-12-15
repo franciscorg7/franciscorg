@@ -1,1 +1,23 @@
-{ "title": "WORK EXPERIENCE" }
+{
+  "title": "WORK EXPERIENCE",
+  "theloop": {
+    "duration": "Oct 2022 - Present",
+    "description": "Enhanced customer experience and gained holistic project context by participating in frontend, backend, and cloud infrastructure tasks. \n Developed the Point of Sale web application for Ticketline, facilitating seamless ticket transactions for high-volume events. \n Leading frontend development for Caixa Geral de Depósitos, creating a document management module within a micro-service platform. utilized Angular, Springboot, and Google Cloud."
+  },
+  "devoteam": {
+    "duration": "Apr 2022 - Oct 2022",
+    "description": "Operated as a specialized frontend consultant with a primary focus on Angular ecosystems. \n Achieved AWS Cloud Services certification, bridging the gap between frontend logic and cloud infrastructure."
+  },
+  "inova": {
+    "duration": "Sep 2021 - Apr 2022",
+    "description": "Developed custom sustainability solutions, serving as the pivot between client needs and technical implementation. \n Built robust services using Angular for the interface and NodeJS for server-side logic"
+  },
+  "optionq": {
+    "duration": "Oct 2020 - Apr 2021",
+    "description": "Acted as the bridge between Frontend engineering and UX/UI design teams. \n Contributed to a custom React-based product comparison platform, ensuring design consistency and functional accuracy."
+  },
+  "vetbizz": {
+    "duration": "Feb 2020 - Jul 2020",
+    "description": "Full-stack development handling data processing and server-side functionalities. Utilized PHP and JavaScript to implement automated cron-jobs and data analysis dashboards."
+  }
+}

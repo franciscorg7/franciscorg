@@ -7,7 +7,7 @@ import React, { type JSX } from 'react'
  * @param text - the text string retrieved from the i18n file
  * @returns an array of React fragments containing text and <br /> tags.
  */
-export const formatNewlines = (text: string | undefined | null): JSX.Element | null => {
+export const formatNewLines = (text: string | undefined | null): JSX.Element | null => {
   // Return null immediately if the text is undefined, null or an empty string
   if (!text) return null
 

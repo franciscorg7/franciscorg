@@ -9,7 +9,7 @@ export const Section = ({
 }: SectionProps) => (
   <section
     key={id}
-    className={`relative min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
+    className={`relative font-body min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
   >
     {title && <span className={`font-title mb-12 ${titleClass}`}>{title}</span>}
     {children}

@@ -1,11 +1,13 @@
 import { Layout } from './layout/Layout'
 import { AboutMe } from './features/AboutMe/AboutMe'
-import { Competences } from './features/Competences/Competences'
 import { Hero } from './features/Hero/Hero'
 import { Projects } from './features/Projects/Projects'
-import { WorkExp } from './features/WorkExp/WorkExp'
+import { Skills } from './features/Skills/Skills'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import LocaleWrapper from './layout/LocaleWrapper'
+import { Education } from './features/Education/Education'
+import { WorkExperience } from './features/WorkExperience/WorkExperience'
+import { WorkExperienceProvider } from './features/WorkExperience/context'
 
 export function App() {
   return (
@@ -19,9 +21,12 @@ export function App() {
               <Layout>
                 <Hero id="hero" />
                 <AboutMe id="about-me" page={2}></AboutMe>
-                <WorkExp id="career" page={3}></WorkExp>
-                <Competences id="competences" page={4}></Competences>
-                <Projects id="projects" page={5}></Projects>
+                <WorkExperienceProvider>
+                  <WorkExperience id="career" page={3}></WorkExperience>
+                </WorkExperienceProvider>
+                <Skills id="skills" page={4}></Skills>
+                <Education id="education" page={5}></Education>
+                <Projects id="projects" page={6}></Projects>
               </Layout>
             }
           />

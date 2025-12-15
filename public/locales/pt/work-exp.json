@@ -1,1 +1,23 @@
-{ "title": "EXPERIÊNCIA PROFISSIONAL" }
+{
+  "title": "EXPERIÊNCIA PROFISSIONAL",
+  "theloop": {
+    "duration": "out 2022 - Presente",
+    "description": "Liderança de desenvolvimento frontend para plataformas bancárias e de bilhética escaláveis (Caixa Geral de Depósitos, Ticketline). Utilização de Angular, Springboot e Google Cloud para impulsionar arquiteturas de micro-serviços robustas e mentoria de equipas técnicas."
+  },
+  "devoteam": {
+    "duration": "abr 2022 - out 2022",
+    "description": "Atuação como consultor especializado em frontend com foco em ecossistemas Angular. Obtenção da certificação AWS Cloud Services, ligando com sucesso a lógica de frontend à infraestrutura cloud."
+  },
+  "inova": {
+    "duration": "set 2021 - abr 2022",
+    "description": "Desenvolvimento de soluções de sustentabilidade personalizadas, atuando como o elo entre as necessidades do cliente e a implementação técnica. Construção de serviços full-stack robustos usando Angular para interfaces e Node.js para lógica do lado do servidor."
+  },
+  "optionq": {
+    "duration": "out 2020 - abr 2021",
+    "description": "Atuação como ponte entre a engenharia de Frontend e as equipas de UX/UI. Contribuição para uma plataforma personalizada de comparação de produtos em React, garantindo consistência de design e precisão funcional."
+  },
+  "vetbizz": {
+    "duration": "fev 2020 - jul 2020",
+    "description": "Desenvolvimento full-stack focado no processamento de dados e funcionalidades server-side. Utilização de PHP e JavaScript para implementar cron-jobs automatizados e dashboards de análise de dados."
+  }
+}

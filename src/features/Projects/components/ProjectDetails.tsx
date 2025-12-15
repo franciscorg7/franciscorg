@@ -4,7 +4,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { ProjectStackDisplay } from './ProjectStackDisplay'
 import { useTranslation } from 'react-i18next'
 import { ProjectsTranslationKey, RootTranslationKey } from '../../../config/translation-keys'
-import { formatNewlines } from '../../../utils/formatNewLines'
+import { formatNewLines } from '../../../utils/formatNewLines'
 
 interface ProjectDetailsProps {
   project: ProjectType
@@ -23,7 +23,7 @@ export const ProjectDetails = ({ project, onBack }: ProjectDetailsProps) => {
         <span className="text-4xl font-bold">{project.title}</span>
         <span className="text-md">{`${project.date}`}</span>
         <span className="text-xl">{`${project.company}`}</span>
-        <span>{formatNewlines(t(project.description))}</span>
+        <span>{formatNewLines(t(project.description))}</span>
       </div>
       <div className="mt-2">
         <h3 className="text-2xl font-bold mb-3 text-primary-800">
