@@ -2,16 +2,27 @@ import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
 import { ProjectsWindow } from './components/ProjectsWindow'
 import { ProjectProvider } from './context/ProjectContext'
-import type { ProjectsProps } from './types'
-import { projects, PROJECTS_TITLE, PROJECTS_WINDOW_TITLE } from './data'
+import { projects, PROJECTS_WINDOW_TITLE } from './data'
+import { useTranslation } from 'react-i18next'
+import { ProjectsTranslationKey, RootTranslationKey } from '../../config/translation-keys'
 
-export const Projects = ({ id, page }: ProjectsProps) => (
-  <Section id={id} title={PROJECTS_TITLE} contentClass="bg-primary-600 justify-between">
-    <div className="flex flex-grow h-full">
+interface ProjectsProps {
+  id: string
+  page: number
+}
+
+export const Projects = ({ id, page }: ProjectsProps) => {
+  const { t } = useTranslation(RootTranslationKey.PROJECTS)
+  return (
+    <Section
+      id={id}
+      title={t(ProjectsTranslationKey.TITLE)}
+      contentClass="flex-col bg-primary-600 justify-between"
+    >
       <ProjectProvider>
         <ProjectsWindow title={PROJECTS_WINDOW_TITLE} projects={projects}></ProjectsWindow>
       </ProjectProvider>
-    </div>
-    <PageFooter currentPage={page}></PageFooter>
-  </Section>
-)
+      <PageFooter currentPage={page} position="bottom-0 right-0"></PageFooter>
+    </Section>
+  )
+}

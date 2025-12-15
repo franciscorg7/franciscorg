@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Outfit:wght@100..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -14,21 +14,46 @@
   --color-primary-900: #0a4a70;
   --color-primary-950: #072f4a;
 
-  --color-secondary-50: #f8f8f8;
-  --color-secondary-100: #ececec;
-  --color-secondary-200: #dcdcdc;
-  --color-secondary-300: #bdbdbd;
-  --color-secondary-400: #989898;
-  --color-secondary-500: #7c7c7c;
-  --color-secondary-600: #656565;
-  --color-secondary-700: #525252;
-  --color-secondary-800: #464646;
-  --color-secondary-900: #3d3d3d;
-  --color-secondary-950: #292929;
+  --color-accent-50: #fff4ed;
+  --color-accent-100: #ffe6d5;
+  --color-accent-200: #feccaa;
+  --color-accent-300: #fdac74;
+  --color-accent-400: #fb8a3c;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea670c;
+  --color-accent-700: #c2570c;
+  --color-accent-800: #9a4a12;
+  --color-accent-900: #7c3d12;
+  --color-accent-950: #432007;
+
+  --color-secondary-50: #f5f5f4;
+  --color-secondary-100: #f0f0ee;
+  --color-secondary-200: #ddddda;
+  --color-secondary-300: #c0bfb9;
+  --color-secondary-400: #9d9c93;
+  --color-secondary-500: #818176;
+  --color-secondary-600: #696860;
+  --color-secondary-700: #56564e;
+  --color-secondary-800: #494943;
+  --color-secondary-900: #3f3e3b;
+  --color-secondary-950: #2a2a27;
+
+  --text-10xl: 9rem;
+  --text-10xl--line-height: 1;
+  --text-11xl: 10rem;
+  --text-11xl--line-height: 1;
+  --text-12xl: 12rem;
+  --text-12xl--line-height: 1;
+  --text-huge: 14rem;
+  --text-huge--line-height: 1;
 }
 
 @layer theme {
   .font-title {
     font-family: var(--tw-font-title, 'Barriecito', 'cursive');
+  }
+
+  .font-body {
+    font-family: var(--tw-font-body, 'Outfit', 'sans-serif');
   }
 }

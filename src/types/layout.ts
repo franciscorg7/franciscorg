@@ -11,8 +11,3 @@ export interface SectionProps {
   contentClass?: string
   children: ReactNode
 }
-
-export interface PageFooterProps {
-  currentPage: number
-  className?: string
-}

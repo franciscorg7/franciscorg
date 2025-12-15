@@ -1,0 +1,18 @@
+{
+  "title": "PROJECTS",
+  "details": {
+    "back": "Back",
+    "stack": "Technology Stack"
+  },
+  "project": {
+    "bioma": {
+      "description": "During my tenure at Inova+, I served as a core Full-Stack Developer on the BIOMA project, focused on creating a centralized digital solution to manage and track sustainability and operational compliance across the complex agrifood value chain.\nI was responsible for the end-to-end development, working closely with the client to deploy a custom-tailored system. On the frontend, I utilized Angular to build a responsive Single Page Application (SPA), implementing complex reactive forms and dynamic data visualization dashboards for stakeholder insights. On the service side, I developed and secured the RESTful API using Node.js, focusing on efficient data modeling and ensuring high data integrity for all supply chain logistics.\nThis experience provided continuous, hands-on opportunities to master the full JavaScript development ecosystem (Angular/Node.js), successfully transitioning business needs into a robust and scalable technical solution that streamlined resource management and sustainability reporting."
+    },
+    "pos": {
+      "description": "I served as an essential Frontend Developer for the Ticketline Point of Sale (POS) system, a critical platform used for the in-person sale of event tickets at venues and physical locations.\nMy primary responsibility was the comprehensive user interface development using React. To manage the complex and dynamic state of transactions (such as seat selection, shopping cart management, and payment status), the utilization of Redux was crucial, ensuring predictability and traceability in high-volume sales operations. The project required the creation of a robust and fast system capable of processing real-time transactions, from seat selection to instant ticket issuance.\nThis experience deepened my proficiency in React and in managing complex interface states with Redux, and sparked a great enthusiasm for the ticketing sector. I was able to contribute to a critical solution in high-volume, time-sensitive sales environments, making the work experience highly rewarding."
+    },
+    "pemp": {
+      "description": "I was a key contributor in the development of a new, large-scale credit system for one of Portugal's major banks (CGD). My role, beyond development, extended to release management and the mentorship of junior team members, ensuring both code quality and team growth.\nTechnically, I integrated Angular frontend modules with the Java backend via RESTful APIs and was responsible for developing complex core banking functionalities:\nLimits Override Module: Engineered the configuration of quantitative properties (e.g., amounts, guarantees) within a hierarchical data tree structure, ensuring real-time validation across limits and product relationships.\nDocument Management Module: Built functionalities for users to import, categorize, sign, and manage essential credit documents, including filtering and preview features.\nI ensured code consistency and quality by contributing to a shared styled components library (documented via Storybook), writing comprehensive unit tests (Jasmine/Karma), and playing an active role in coordinating production releases."
+    }
+  }
+}

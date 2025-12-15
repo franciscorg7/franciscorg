@@ -2,30 +2,28 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import Backend from 'i18next-http-backend'
-import { TranslationKey } from './translation-keys'
-
-const namespaces = Object.keys(TranslationKey)
+import { RootTranslationKey } from './translation-keys'
 
 i18n
   .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: false,
     fallbackLng: 'en',
     supportedLngs: ['en', 'pt'],
     backend: {
-      loadPath: '/locales/{{lng}}/translation.json',
-      allowMultiLoading: true,
+      // {{lng}} will be replaced by 'en', 'pt', etc.
+      // {{ns}} will be replaced by 'hero', 'projects', etc.
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    detection: {
-      order: ['queryString', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-    },
-    react: {
-      useSuspense: false,
-    },
-    ns: namespaces,
-    defaultNS: namespaces[0],
+    ns: [
+      RootTranslationKey.COMMON,
+      RootTranslationKey.HERO,
+      RootTranslationKey.ABOUT_ME,
+      RootTranslationKey.WORK_EXP,
+      RootTranslationKey.PROJECTS,
+    ],
+    defaultNS: RootTranslationKey.COMMON,
     interpolation: {
       escapeValue: false,
     },
