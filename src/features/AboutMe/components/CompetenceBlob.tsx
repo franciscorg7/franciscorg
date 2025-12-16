@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
-import { blobShapes } from '../config'
 import { Blob } from '../../../shared/components/Blob'
+import { blobShapes } from '../../../config/blob-shape'
 
 interface CompetenceTagProps {
   label: string
@@ -10,14 +10,15 @@ interface CompetenceTagProps {
 
 export const CompetenceBlob = ({ label, className = '', index }: CompetenceTagProps) => {
   const shape = useMemo(() => {
-    // Pick a shape deterministically from that specific list
+    const shapes = Object.values(blobShapes)
+
     if (typeof index === 'number') {
-      return blobShapes[index % blobShapes.length]
+      return shapes[index % shapes.length]
     }
 
     const charCodeSum = label.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
 
-    return blobShapes[charCodeSum % blobShapes.length]
+    return shapes[charCodeSum % shapes.length]
   }, [label, index])
 
   return (

@@ -10,6 +10,7 @@ import {
 } from '../../shared/components/ExperienceDetails'
 import { useWorkExperience } from './context'
 import { useEffect, useMemo } from 'react'
+import { Chip } from '../../shared/components/Chip'
 
 interface WorkExpProps {
   id: string
@@ -56,7 +57,7 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
       titleClass="text-white text-12xl"
       contentClass="bg-accent-500 justify-between"
     >
-      <div className="flex grow">
+      <div className="flex grow gap-8">
         <div className="flex-1">
           <ExperienceList
             experiences={experiences}
@@ -65,7 +66,16 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
           ></ExperienceList>
         </div>
         <div className="flex-2">
-          {selectedExperienceId ? <ExperienceDetails details={details}></ExperienceDetails> : null}
+          {selectedExperienceId ? (
+            <div className="flex flex-col">
+              <ExperienceDetails details={details}></ExperienceDetails>
+              <div className="flex flex-wrap gap-2 mt-6">
+                {details?.keywords?.map((keyword, id) => (
+                  <Chip key={id} className={keyword.className} label={keyword.text} />
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
       <PageFooter currentPage={page} position="bottom-0 left-0" justify="start"></PageFooter>
