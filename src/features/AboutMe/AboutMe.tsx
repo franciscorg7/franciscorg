@@ -32,8 +32,8 @@ export const AboutMe = ({ id }: AboutMeProps) => {
         <div className="flex flex-2 justify-center items-center">
           <div className="relative w-fit">
             <Blob
-              color="bg-yellow-400"
-              className="absolute z-10 bottom-8 right-4 w-fit h-fit py-12 px-8 font-bold uppercase text-2xl"
+              color="bg-accent-500"
+              className="absolute z-10 bottom-8 right-4 w-fit h-fit py-12 px-8 text-white font-bold uppercase text-2xl"
             >
               {NAME_LABEL}
             </Blob>
