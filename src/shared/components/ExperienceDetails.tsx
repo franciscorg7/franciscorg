@@ -25,8 +25,10 @@ export const ExperienceDetails = ({ details }: ExperienceDetailsProps) => {
       <span className="tracking-wide text-xl">
         <b>{details.title}</b> | {details.role}
       </span>
-      <span>({details.duration})</span>
-      {details.description && <span>{formatNewLines(details.description)}</span>}
+      <span className="text-lg">({details.duration})</span>
+      {details.description && (
+        <span className="text-lg">{formatNewLines(details.description)}</span>
+      )}
     </div>
   ) : null
 }

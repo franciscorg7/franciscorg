@@ -18,7 +18,7 @@ export const AboutMe = ({ id }: AboutMeProps) => {
           <span className="font-title text-primary-700 text-9xl">
             {t(AboutMeTranslationKey.TITLE)}
           </span>
-          <span className="font-body text-xl pt-10">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+          <span className="font-body text-lg pt-10">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
           <div className="flex gap-3 mt-8 flex-wrap">
             {competences.map(competence => (
               <CompetenceBlob

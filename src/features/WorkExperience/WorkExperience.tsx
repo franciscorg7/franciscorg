@@ -62,6 +62,8 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
           <ExperienceList
             experiences={experiences}
             selectedExperience={selectedExperienceId}
+            color="accent"
+            hover
             onSelectExperience={handleSelectExperience}
           ></ExperienceList>
         </div>

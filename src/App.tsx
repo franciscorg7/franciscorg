@@ -21,11 +21,11 @@ export function App() {
               <Layout>
                 <Hero id="hero" />
                 <AboutMe id="about-me" page={2}></AboutMe>
+                <Education id="education" page={3}></Education>
                 <WorkExperienceProvider>
-                  <WorkExperience id="career" page={3}></WorkExperience>
+                  <WorkExperience id="career" page={4}></WorkExperience>
                 </WorkExperienceProvider>
                 <Skills id="skills" page={4}></Skills>
-                <Education id="education" page={5}></Education>
                 <Projects id="projects" page={6}></Projects>
               </Layout>
             }

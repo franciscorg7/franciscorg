@@ -22,13 +22,14 @@ export const Education = ({ id, page }: EducationProps) => {
     <Section
       id={id}
       title={t(EducationTranslationKey.TITLE)}
-      titleClass="text-primary-700 text-9xl"
-      contentClass="bg-secondary-100 justify-between"
+      titleClass="text-right text-primary-700 text-12xl"
+      contentClass="bg-secondary-50 justify-between"
     >
-      <div className="flex flex-col grow">
-        <div className="flex-1">test</div>
-        <div className="flex-1 w-1/2">
-          <ExperienceList experiences={experiences}></ExperienceList>
+      <div className="flex grow">
+        <div className="flex flex-1"></div>
+        <div className="flex flex-1 flex-col gap-12">
+          <span className="text-lg">{t(EducationTranslationKey.DESCRIPTION)}</span>
+          <ExperienceList experiences={experiences} color="primary"></ExperienceList>
         </div>
       </div>
       <PageFooter currentPage={page} position="bottom-0 right-0"></PageFooter>

@@ -66,6 +66,7 @@ export const EducationTranslationKey = {
   TITLE: 'title',
   DEGREE: 'degree',
   MASTERS: 'masters',
+  DESCRIPTION: 'description',
 } as const
 
 export const ProjectsTranslationKey = {
