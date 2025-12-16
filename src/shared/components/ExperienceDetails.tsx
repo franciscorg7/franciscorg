@@ -1,11 +1,18 @@
 import { formatNewLines } from '../../utils/formatNewLines'
 
+interface ExperienceKeyword {
+  text: string
+  shape: string
+  className: string
+}
+
 export interface ExperienceItemDetails {
   id: string
   title: string
   role: string
   duration: string
   description?: string
+  keywords?: ExperienceKeyword[]
 }
 
 interface ExperienceDetailsProps {
@@ -14,7 +21,7 @@ interface ExperienceDetailsProps {
 
 export const ExperienceDetails = ({ details }: ExperienceDetailsProps) => {
   return details ? (
-    <div className="flex flex-col gap-2 p-4">
+    <div className="flex flex-col gap-2">
       <span className="tracking-wide text-xl">
         <b>{details.title}</b> | {details.role}
       </span>

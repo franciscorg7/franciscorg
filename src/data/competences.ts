@@ -1,1 +1,0 @@
-export const COMPETENCES_TITLE = 'COMPETENCES'

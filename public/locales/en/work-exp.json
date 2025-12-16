@@ -2,22 +2,22 @@
   "title": "WORK EXPERIENCE",
   "theloop": {
     "duration": "Oct 2022 - Present",
-    "description": "Enhanced customer experience and gained holistic project context by participating in frontend, backend, and cloud infrastructure tasks. \n Developed the Point of Sale web application for Ticketline, facilitating seamless ticket transactions for high-volume events. \n Leading frontend development for Caixa Geral de Depósitos, creating a document management module within a micro-service platform. utilized Angular, Springboot, and Google Cloud."
+    "description": "Loop was where I solidified my transition from Developer to Technical Lead. My journey began with developing Ticketline's Point of Sale system using React, but quickly scaled to enterprise-level banking challenges. \n I joined Caixa Geral de Depósitos to work on their corporate management platform utilizing Angular and Google Cloud. Beyond development, I drove engineering quality by implementing strict unit testing protocols, conducting code reviews, and providing technical mentorship to the team. \n I then advanced to a Senior Developer role for Santander's Private Banking module. Operating within the bank's main cockpit, I took ownership of Release Management and application deployments. I served as the primary point of contact for environment configuration and client liaison, managing the full lifecycle of critical financial software delivery."
   },
   "devoteam": {
     "duration": "Apr 2022 - Oct 2022",
-    "description": "Operated as a specialized frontend consultant with a primary focus on Angular ecosystems. \n Achieved AWS Cloud Services certification, bridging the gap between frontend logic and cloud infrastructure."
+    "description": "At Devoteam, I shaped my career path by bridging frontend development with Cloud Services within the AWS ecosystem. My focus was on building internal platforms using Angular, ensuring they were not only functional but also aligned with modern cloud architectures. \n I actively contributed to the development of tools that supported the company's operations while simultaneously deepening my knowledge of infrastructure. This commitment to mastering the cloud environment led to my certification as an AWS Cloud Practitioner, validating my ability to understand and leverage cloud resources effectively in frontend projects"
   },
   "inova": {
     "duration": "Sep 2021 - Apr 2022",
-    "description": "Developed custom sustainability solutions, serving as the pivot between client needs and technical implementation. \n Built robust services using Angular for the interface and NodeJS for server-side logic"
+    "description": "Inova+ served as my launchpad into autonomous the fullstack development. I was entrusted with the end-to-end development of two greenfield projects, leveraging a stack of Angular and NodeJS. \n I built BIOMA, a sustainability platform for the agri-food value chain, and took a leading role in CityCatalyst. The latter was a complex R&D initiative focused on Smart Cities. Beyond coding, I was involved in the research and real-world validation of solutions aimed at integrated urban management. My focus was on ensuring interoperability between urban platforms to foster sustainable development. This experience proved my ability to take ownership of complex projects from concept to deployment."
   },
   "optionq": {
     "duration": "Oct 2020 - Apr 2021",
-    "description": "Acted as the bridge between Frontend engineering and UX/UI design teams. \n Contributed to a custom React-based product comparison platform, ensuring design consistency and functional accuracy."
+    "description": "OptionQ was my first professional role and a pivotal step in my career. I worked on the development of an internal product comparison platform, acting as the bridge between the design and frontend engineering teams. Leveraging Figma for UI/UX tasks and React for implementation, I ensured that visual requirements were translated into performant code. \n This role also introduced me to the Agile methodology. Working in sprints allowed me to collaborate closely with stakeholders, iterate quickly on features, and understand the full lifecycle of modern product development. It was an environment that sharpened both my technical React skills and my ability to facilitate cross-functional communication."
   },
   "vetbizz": {
-    "duration": "Feb 2020 - Jul 2020",
-    "description": "Full-stack development handling data processing and server-side functionalities. Utilized PHP and JavaScript to implement automated cron-jobs and data analysis dashboards."
+    "duration": "Sep 2019 - Jul 2020",
+    "description": "VetBizz Consulting served as my gateway into the professional tech world. As a software engineer intern, I was tasked with bridging the gap between raw data and actionable insights for veterinary consultancy. Here I designed and built a statistical analysis dashboard using HTML, CSS and jQuery, providing the team with a clear visualization of required KPIs. \n Beyond the interface, I tackled backend automation using PHP by implementing a few cron-jobs to handle client management tasks, such as automated email dispatching and document manipulation. This role was pivotal in honing my problem-solving skills and understanding how to deliver robust code in a business environment."
   }
 }
