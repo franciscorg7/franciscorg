@@ -9,7 +9,7 @@ import {
   type ExperienceItemDetails,
 } from '../../shared/components/ExperienceDetails'
 import { useWorkExperience } from './context'
-import { useState } from 'react'
+import { useEffect, useMemo } from 'react'
 
 interface WorkExpProps {
   id: string
@@ -20,14 +20,25 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
   const { selectedExperienceId, setSelectedExperience } = useWorkExperience()
 
-  const translatedDetails = experienceDetails.map(detail => ({
-    ...detail,
-    title: t(detail.title),
-    duration: t(detail.duration),
-    description: detail.description ? t(detail.description) : null,
-  })) as ExperienceItemDetails[]
+  useEffect(() => {
+    // Set initial selected experience
+    if (!selectedExperienceId && experiences.length > 0) {
+      setSelectedExperience(experiences[0].id)
+    }
+  }, [selectedExperienceId, setSelectedExperience])
 
-  const [details, setDetails] = useState(translatedDetails[0])
+  const translatedDetails = useMemo(
+    () =>
+      experienceDetails.map(detail => ({
+        ...detail,
+        title: t(detail.title),
+        duration: t(detail.duration),
+        description: detail.description ? t(detail.description) : null,
+      })) as ExperienceItemDetails[],
+    [t]
+  )
+
+  const details = translatedDetails.find(d => d.id === selectedExperienceId) || null
 
   /**
    * Handles the selection of an experience by setting the id into state.
@@ -35,9 +46,6 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
    * @param id - the selected experience id.
    */
   const handleSelectExperience = (id: string) => {
-    const selectedDetails = translatedDetails.find(detail => detail.id === id)
-    if (selectedDetails) setDetails(selectedDetails)
-
     setSelectedExperience(id)
   }
 

@@ -16,6 +16,11 @@ export const HeroTranslationKey = {
 export const AboutMeTranslationKey = {
   TITLE: 'title',
   DESCRIPTION: 'description',
+
+  COMPETENCES: 'competences',
+  COMPETENCES_FRONTEND: 'competences.frontend',
+  COMPETENCES_TEAM_MENTORING: 'competences.team_mentoring',
+  COMPETENCES_DELIVERY_OWNERSHIP: 'competences.delivery_ownership',
 } as const
 
 export const WorkExperienceTranslationKey = {

@@ -1,3 +1,28 @@
-export const ABOUT_ME_TITLE = 'ABOUT ME'
-export const ABOUT_ME_TEXT =
-  'Always learning and always creating. I bring a developer’s mindset shaped by curiosity and organized execution, paired with a leader’s ability to transform complexity into clarity. My focus is on creating reliable and scalable solutions while empowering teams, aligning stakeholders and driving delivery with compromise and collaboration.'
+import { AboutMeTranslationKey } from '../../config/translation-keys'
+import type { CompetenceItem } from './types'
+
+const CompetenceItemId = {
+  FRONTEND: 'frontend',
+  TEAM_MENTORING: 'team-mentoring',
+  DELIVERY_OWNERSHIP: 'delivery-ownership',
+} as const
+
+export const competences: CompetenceItem[] = [
+  {
+    id: CompetenceItemId.FRONTEND,
+    translationKey: AboutMeTranslationKey.COMPETENCES_FRONTEND,
+    className: 'bg-blue-200 text-blue-800',
+  },
+  {
+    id: CompetenceItemId.TEAM_MENTORING,
+    translationKey: AboutMeTranslationKey.COMPETENCES_TEAM_MENTORING,
+    className: 'bg-green-200 text-green-800',
+  },
+  {
+    id: CompetenceItemId.DELIVERY_OWNERSHIP,
+    translationKey: AboutMeTranslationKey.COMPETENCES_DELIVERY_OWNERSHIP,
+    className: 'bg-yellow-200 text-yellow-800',
+  },
+]
+
+export const NAME_LABEL = 'Francisco Gonçalves'
