@@ -2,8 +2,11 @@
   "title": "ABOUT ME",
   "description": "Always learning and always creating. I bring a developer’s mindset shaped by curiosity and organized execution, paired with a leader’s ability to transform complexity into clarity. My focus is on creating reliable and scalable solutions while empowering teams, aligning stakeholders and driving delivery with compromise and collaboration.",
   "competences": {
-    "frontend": "Frontend Development",
-    "team_mentoring": "Team Mentoring",
-    "delivery_ownership": "Delivery Ownership"
+    "frontend": "Frontend Architecture",
+    "design_systems": "Design Systems",
+    "tech_strategy": "Technical Strategy",
+    "mentorship": "Mentorship",
+    "product_delivery": "Product Delivery",
+    "problem_solving": "Problem Solving"
   }
 }

@@ -1,16 +1,15 @@
-import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
 import { useTranslation } from 'react-i18next'
 import { EducationTranslationKey, RootTranslationKey } from '../../config/translation-keys'
 import { ExperienceList } from '../../shared/components/ExperienceList'
 import { academicExperiences } from './data'
+import wave from '../../assets/work-experience-wave-top.svg'
 
-export interface EducationProps {
+interface EducationProps {
   id: string
-  page: number
 }
 
-export const Education = ({ id, page }: EducationProps) => {
+export const Education = ({ id }: EducationProps) => {
   const { t } = useTranslation(RootTranslationKey.EDUCATION)
 
   const experiences = academicExperiences.map(experience => ({
@@ -25,14 +24,14 @@ export const Education = ({ id, page }: EducationProps) => {
       titleClass="text-right text-primary-700 text-12xl"
       contentClass="bg-secondary-50 justify-between"
     >
-      <div className="flex grow">
+      <img src={wave} className="absolute inset-0 w-full h-full object-cover z-10" alt="waves" />
+      <div className="relative flex grow z-10">
         <div className="flex flex-1"></div>
         <div className="flex flex-1 flex-col gap-12">
           <span className="text-lg">{t(EducationTranslationKey.DESCRIPTION)}</span>
           <ExperienceList experiences={experiences} color="primary"></ExperienceList>
         </div>
       </div>
-      <PageFooter currentPage={page} position="bottom-0 right-0"></PageFooter>
     </Section>
   )
 }

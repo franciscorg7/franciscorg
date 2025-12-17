@@ -3,25 +3,44 @@ import type { CompetenceItem } from './types'
 
 const CompetenceItemId = {
   FRONTEND: 'frontend',
-  TEAM_MENTORING: 'team-mentoring',
-  DELIVERY_OWNERSHIP: 'delivery-ownership',
+  TECH_STRATEGY: 'technical-strategy',
+  DESIGN_SYSTEMS: 'design-systems',
+  MENTORSHIP: 'mentorship-leadership',
+  PRODUCT_DELIVERY: 'product-delivery',
+  PROBLEM_SOLVING: 'problem-solving',
 } as const
 
 export const competences: CompetenceItem[] = [
   {
     id: CompetenceItemId.FRONTEND,
     translationKey: AboutMeTranslationKey.COMPETENCES_FRONTEND,
-    className: 'bg-blue-200 text-blue-800',
+    className: 'bg-indigo-600 text-white',
   },
   {
-    id: CompetenceItemId.TEAM_MENTORING,
-    translationKey: AboutMeTranslationKey.COMPETENCES_TEAM_MENTORING,
-    className: 'bg-green-200 text-green-800',
+    id: CompetenceItemId.DESIGN_SYSTEMS,
+    translationKey: AboutMeTranslationKey.COMPETENCES_DESIGN_SYSTEMS,
+    className: 'bg-fuchsia-600 text-white',
   },
   {
-    id: CompetenceItemId.DELIVERY_OWNERSHIP,
-    translationKey: AboutMeTranslationKey.COMPETENCES_DELIVERY_OWNERSHIP,
-    className: 'bg-yellow-200 text-yellow-800',
+    id: CompetenceItemId.TECH_STRATEGY,
+    translationKey: AboutMeTranslationKey.COMPETENCES_TECH_STRATEGY,
+    className: 'bg-slate-600 text-white',
+  },
+  {
+    id: CompetenceItemId.MENTORSHIP,
+    translationKey: AboutMeTranslationKey.COMPETENCES_MENTORSHIP,
+    className: 'bg-teal-600 text-white',
+  },
+
+  {
+    id: CompetenceItemId.PRODUCT_DELIVERY,
+    translationKey: AboutMeTranslationKey.COMPETENCES_PRODUCT_DELIVERY,
+    className: 'bg-rose-600 text-white',
+  },
+  {
+    id: CompetenceItemId.PROBLEM_SOLVING,
+    translationKey: AboutMeTranslationKey.COMPETENCES_PROBLEM_SOLVING,
+    className: 'bg-yellow-600 text-white',
   },
 ]
 

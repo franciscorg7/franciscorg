@@ -1,4 +1,3 @@
-import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
 import { ProjectsWindow } from './components/ProjectsWindow'
 import { ProjectProvider } from './context/ProjectContext'
@@ -8,10 +7,9 @@ import { ProjectsTranslationKey, RootTranslationKey } from '../../config/transla
 
 interface ProjectsProps {
   id: string
-  page: number
 }
 
-export const Projects = ({ id, page }: ProjectsProps) => {
+export const Projects = ({ id }: ProjectsProps) => {
   const { t } = useTranslation(RootTranslationKey.PROJECTS)
   return (
     <Section
@@ -22,7 +20,6 @@ export const Projects = ({ id, page }: ProjectsProps) => {
       <ProjectProvider>
         <ProjectsWindow title={PROJECTS_WINDOW_TITLE} projects={projects}></ProjectsWindow>
       </ProjectProvider>
-      <PageFooter currentPage={page} position="bottom-0 right-0"></PageFooter>
     </Section>
   )
 }

@@ -20,13 +20,13 @@ export function App() {
             element={
               <Layout>
                 <Hero id="hero" />
-                <AboutMe id="about-me" page={2}></AboutMe>
-                <Education id="education" page={3}></Education>
+                <AboutMe id="about-me"></AboutMe>
+                <Education id="education"></Education>
                 <WorkExperienceProvider>
-                  <WorkExperience id="career" page={4}></WorkExperience>
+                  <WorkExperience id="career"></WorkExperience>
                 </WorkExperienceProvider>
-                <Skills id="skills" page={4}></Skills>
-                <Projects id="projects" page={6}></Projects>
+                <Skills id="skills"></Skills>
+                <Projects id="projects"></Projects>
               </Layout>
             }
           />

@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import { RootTranslationKey, WorkExperienceTranslationKey } from '../../config/translation-keys'
-import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
 import { ExperienceList } from '../../shared/components/ExperienceList'
 import { experienceDetails, experiences } from './data'
@@ -11,13 +10,13 @@ import {
 import { useWorkExperience } from './context'
 import { useEffect, useMemo } from 'react'
 import { Chip } from '../../shared/components/Chip'
+import wave from '../../assets/work-experience-wave-bottom.svg'
 
 interface WorkExpProps {
   id: string
-  page: number
 }
 
-export const WorkExperience = ({ id, page }: WorkExpProps) => {
+export const WorkExperience = ({ id }: WorkExpProps) => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
   const { selectedExperienceId, setSelectedExperience } = useWorkExperience()
 
@@ -57,7 +56,12 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
       titleClass="text-white text-12xl"
       contentClass="bg-accent-500 justify-between"
     >
-      <div className="flex grow gap-8">
+      <img
+        src={wave}
+        className="absolute inset-0 bottom-0 w-full h-full object-cover z-10"
+        alt="waves"
+      />
+      <div className="relative flex grow gap-8">
         <div className="flex-1">
           <ExperienceList
             experiences={experiences}
@@ -80,7 +84,6 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
           ) : null}
         </div>
       </div>
-      <PageFooter currentPage={page} position="bottom-0 left-0" justify="start"></PageFooter>
     </Section>
   )
 }

@@ -19,8 +19,13 @@ export const AboutMeTranslationKey = {
 
   COMPETENCES: 'competences',
   COMPETENCES_FRONTEND: 'competences.frontend',
-  COMPETENCES_TEAM_MENTORING: 'competences.team_mentoring',
-  COMPETENCES_DELIVERY_OWNERSHIP: 'competences.delivery_ownership',
+  COMPETENCES_DESIGN_SYSTEMS: 'competences.design_systems',
+
+  COMPETENCES_TECH_STRATEGY: 'competences.tech_strategy',
+  COMPETENCES_MENTORSHIP: 'competences.mentorship',
+
+  COMPETENCES_PRODUCT_DELIVERY: 'competences.product_delivery',
+  COMPETENCES_PROBLEM_SOLVING: 'competences.problem_solving',
 } as const
 
 export const WorkExperienceTranslationKey = {
