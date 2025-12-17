@@ -1,3 +1,4 @@
+import { FadeUp } from '../shared/components/FadeUp'
 import type { SectionProps } from '../types/layout'
 
 export const Section = ({
@@ -11,7 +12,12 @@ export const Section = ({
     key={id}
     className={`relative font-body min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
   >
-    {title && <span className={`font-title mb-12 z-20 ${titleClass}`}>{title}</span>}
+    {title && (
+      <span className={`font-title mb-12 z-20 ${titleClass}`}>
+        <FadeUp delay={0.1}>{title}</FadeUp>
+      </span>
+    )}
+
     {children}
   </section>
 )

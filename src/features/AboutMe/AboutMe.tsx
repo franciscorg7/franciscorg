@@ -6,6 +6,7 @@ import { CompetenceBlob } from './components/CompetenceBlob'
 import { competences, NAME_LABEL } from './data'
 import { Blob } from '../../shared/components/Blob'
 import wave from '../../assets/about-me-wave-bottom.svg'
+import { FadeUp } from '../../shared/components/FadeUp'
 
 interface AboutMeProps {
   id: string
@@ -19,8 +20,12 @@ export const AboutMe = ({ id }: AboutMeProps) => {
       <img src={wave} className="absolute inset-0 w-full h-full object-cover z-10" alt="waves" />
       <div className="relative flex grow h-full gap-4 z-10">
         <div className="flex flex-col flex-1 text-white">
-          <span className="font-title text-9xl">{t(AboutMeTranslationKey.TITLE)}</span>
-          <span className="font-body text-lg pt-10">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+          <FadeUp delay={0.1}>
+            <span className="font-title text-9xl">{t(AboutMeTranslationKey.TITLE)}</span>
+          </FadeUp>
+          <FadeUp delay={0.3} className="mt-10">
+            <span className="font-body text-lg">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+          </FadeUp>
           <div className="flex gap-3 mt-8 flex-wrap">
             {competences.map(competence => (
               <CompetenceBlob
