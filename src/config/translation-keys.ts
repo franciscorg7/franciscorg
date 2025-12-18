@@ -71,6 +71,7 @@ export const EducationTranslationKey = {
   TITLE: 'title',
   DEGREE: 'degree',
   MASTERS: 'masters',
+  CERTIFICATIONS_TITLE: 'certifications_title',
   DESCRIPTION: 'description',
 } as const
 

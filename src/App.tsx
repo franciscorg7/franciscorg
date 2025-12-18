@@ -5,9 +5,8 @@ import { Projects } from './features/Projects/Projects'
 import { Skills } from './features/Skills/Skills'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import LocaleWrapper from './layout/LocaleWrapper'
-import { Education } from './features/Education/Education'
-import { WorkExperience } from './features/WorkExperience/WorkExperience'
 import { WorkExperienceProvider } from './features/WorkExperience/context'
+import { CurtainReveal } from './layout/CurtainReveal'
 
 export function App() {
   return (
@@ -21,9 +20,8 @@ export function App() {
               <Layout>
                 <Hero id="hero" />
                 <AboutMe id="about-me"></AboutMe>
-                <Education id="education"></Education>
                 <WorkExperienceProvider>
-                  <WorkExperience id="career"></WorkExperience>
+                  <CurtainReveal></CurtainReveal>
                 </WorkExperienceProvider>
                 <Skills id="skills"></Skills>
                 <Projects id="projects"></Projects>

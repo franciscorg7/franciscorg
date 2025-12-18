@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { RootTranslationKey, WorkExperienceTranslationKey } from '../../config/translation-keys'
-import { Section } from '../../layout/Section'
+import { RootTranslationKey } from '../../config/translation-keys'
 import { ExperienceList } from '../../shared/components/ExperienceList'
 import { experienceDetails, experiences } from './data'
 import {
@@ -10,13 +9,8 @@ import {
 import { useWorkExperience } from './context'
 import { useEffect, useMemo } from 'react'
 import { Chip } from '../../shared/components/Chip'
-import wave from '../../assets/work-experience-wave-bottom.svg'
 
-interface WorkExpProps {
-  id: string
-}
-
-export const WorkExperience = ({ id }: WorkExpProps) => {
+export const WorkExperience = () => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
   const { selectedExperienceId, setSelectedExperience } = useWorkExperience()
 
@@ -50,40 +44,28 @@ export const WorkExperience = ({ id }: WorkExpProps) => {
   }
 
   return (
-    <Section
-      id={id}
-      title={t(WorkExperienceTranslationKey.TITLE)}
-      titleClass="text-white text-12xl"
-      contentClass="bg-accent-500 justify-between"
-    >
-      <img
-        src={wave}
-        className="absolute inset-0 bottom-0 w-full h-full object-cover z-10"
-        alt="waves"
-      />
-      <div className="relative flex grow gap-8">
-        <div className="flex-1">
-          <ExperienceList
-            experiences={experiences}
-            selectedExperience={selectedExperienceId}
-            color="accent"
-            hover
-            onSelectExperience={handleSelectExperience}
-          ></ExperienceList>
-        </div>
-        <div className="flex-2">
-          {selectedExperienceId ? (
-            <div className="flex flex-col">
-              <ExperienceDetails details={details}></ExperienceDetails>
-              <div className="flex flex-wrap gap-2 mt-6">
-                {details?.keywords?.map((keyword, id) => (
-                  <Chip key={id} className={keyword.className} label={keyword.text} />
-                ))}
-              </div>
-            </div>
-          ) : null}
-        </div>
+    <div className="relative flex grow gap-8 z-10">
+      <div className="flex-1">
+        <ExperienceList
+          experiences={experiences}
+          selectedExperience={selectedExperienceId}
+          color="accent"
+          hover
+          onSelectExperience={handleSelectExperience}
+        ></ExperienceList>
       </div>
-    </Section>
+      <div className="flex-2">
+        {selectedExperienceId ? (
+          <div className="flex flex-col">
+            <ExperienceDetails details={details}></ExperienceDetails>
+            <div className="flex flex-wrap gap-2 mt-6">
+              {details?.keywords?.map((keyword, id) => (
+                <Chip key={id} className={keyword.className} label={keyword.text} />
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </div>
   )
 }

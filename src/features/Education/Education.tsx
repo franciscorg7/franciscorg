@@ -1,15 +1,20 @@
-import { Section } from '../../layout/Section'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { EducationTranslationKey, RootTranslationKey } from '../../config/translation-keys'
+import { academicExperiences } from '../../features/Education/data'
 import { ExperienceList } from '../../shared/components/ExperienceList'
-import { academicExperiences } from './data'
-import wave from '../../assets/work-experience-wave-top.svg'
+import { FadeUp } from '../../shared/components/FadeUp'
+import fcup from '../../assets/fcup.png'
 
-interface EducationProps {
-  id: string
-}
+export const Education = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null)
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  })
 
-export const Education = ({ id }: EducationProps) => {
+  const imgX = useTransform(scrollYProgress, [0, 0.25], [-800, 0])
+
   const { t } = useTranslation(RootTranslationKey.EDUCATION)
 
   const experiences = academicExperiences.map(experience => ({
@@ -18,20 +23,24 @@ export const Education = ({ id }: EducationProps) => {
   }))
 
   return (
-    <Section
-      id={id}
-      title={t(EducationTranslationKey.TITLE)}
-      titleClass="text-right text-primary-700 text-12xl"
-      contentClass="bg-secondary-50 justify-between"
-    >
-      <img src={wave} className="absolute inset-0 w-full h-full object-cover z-10" alt="waves" />
-      <div className="relative flex grow z-10">
-        <div className="flex flex-1"></div>
-        <div className="flex flex-1 flex-col gap-12">
+    <div className="absolute h-full w-full px-12 pt-8 pb-24 flex flex-col items-center justify-center bg-primary-900 text-white z-0">
+      <span className={`font-title mb-12 w-full text-right text-white text-12xl`}>
+        <FadeUp delay={0.1}>{t(EducationTranslationKey.TITLE)}</FadeUp>
+      </span>
+      <div className="relative flex grow w-full gap-16 z-10">
+        <div className="flex flex-1 items-center justify-center lg:flex">
+          <motion.img
+            src={fcup}
+            alt="Education illustration"
+            className="w-full max-w-lg object-cover rounded-3xl shadow-xl"
+            style={{ x: imgX }}
+          />
+        </div>
+        <div className="flex flex-1 flex-col gap-12 justify-center">
           <span className="text-lg">{t(EducationTranslationKey.DESCRIPTION)}</span>
-          <ExperienceList experiences={experiences} color="primary"></ExperienceList>
+          <ExperienceList experiences={experiences} color="white"></ExperienceList>
         </div>
       </div>
-    </Section>
+    </div>
   )
 }
