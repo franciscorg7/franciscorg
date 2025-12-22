@@ -7,6 +7,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import LocaleWrapper from './layout/LocaleWrapper'
 import { WorkExperienceProvider } from './features/WorkExperience/context'
 import { CurtainReveal } from './layout/CurtainReveal'
+import { WorkExperience } from './features/WorkExperience/WorkExperience'
 
 export function App() {
   return (
@@ -20,8 +21,9 @@ export function App() {
               <Layout>
                 <Hero id="hero" />
                 <AboutMe id="about-me"></AboutMe>
+                <CurtainReveal></CurtainReveal>
                 <WorkExperienceProvider>
-                  <CurtainReveal></CurtainReveal>
+                  <WorkExperience id="work-experience"></WorkExperience>
                 </WorkExperienceProvider>
                 <Skills id="skills"></Skills>
                 <Projects id="projects"></Projects>
