@@ -18,6 +18,7 @@ export const AboutMeTranslationKey = {
   DESCRIPTION: 'description',
 
   COMPETENCES: 'competences',
+
   COMPETENCES_FRONTEND: 'competences.frontend',
   COMPETENCES_DESIGN_SYSTEMS: 'competences.design_systems',
 
@@ -31,7 +32,6 @@ export const AboutMeTranslationKey = {
 export const WorkExperienceTranslationKey = {
   TITLE: 'title',
 
-  // Experience list
   VETBIZZ: 'vetbizz',
   VETBIZZ_DURATION: 'vetbizz.duration',
   VETBIZZ_DESCRIPTION: 'vetbizz.description',

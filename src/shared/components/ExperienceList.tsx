@@ -16,15 +16,13 @@ interface ExperienceListProps {
 export const ExperienceList = ({
   experiences,
   selectedExperience,
-  color = 'gray',
+  color = 'white/80',
   hover = false,
   onSelectExperience,
 }: ExperienceListProps) => {
   return (
-    <div className={`w-full mx-auto text-${color}-300`}>
-      <div
-        className={`flex flex-col border-y-2 border-${color}-200 divide-y-2 divide-${color}-200`}
-      >
+    <div className={`w-full mx-auto text-${color}`}>
+      <div className={`flex flex-col border-y-2 border-${color} divide-y-2 divide-${color}`}>
         {experiences?.map(exp => (
           <div
             key={exp.id}
@@ -33,12 +31,12 @@ export const ExperienceList = ({
           >
             <span
               className={`font-bold text-lg uppercase tracking-wide transition-colors duration-300 
-                ${hover ? 'group-hover:text-secondary-100' : `text-${color}-300`} 
-                ${exp.id === selectedExperience ? 'text-white' : ''}`}
+                ${hover ? 'group-hover:text-white/80' : `text-${color}`} 
+                ${exp.id === selectedExperience ? 'text-white/80' : ''}`}
             >
               {exp.entity}
             </span>
-            <span className={`font-medium text-lg text-${color}-300`}>{exp.year}</span>
+            <span className={`font-medium text-lg text-${color}`}>{exp.year}</span>
           </div>
         ))}
       </div>

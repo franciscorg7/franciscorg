@@ -87,4 +87,8 @@
   .section-sand {
     background: linear-gradient(180deg, #dfcbac 0%, #d9b99b 100%);
   }
+
+  .glassy-card {
+    @apply bg-white/5 rounded-3xl border border-white/10;
+  }
 }
