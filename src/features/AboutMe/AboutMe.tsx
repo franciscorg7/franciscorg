@@ -1,24 +1,29 @@
-import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
-import type { AboutMeProps } from '../../types/about-me'
 import profile from '../../assets/profile.jpg'
 import { AboutMeTranslationKey, RootTranslationKey } from '../../config/translation-keys'
 import { useTranslation } from 'react-i18next'
 import { CompetenceBlob } from './components/CompetenceBlob'
 import { competences, NAME_LABEL } from './data'
 import { Blob } from '../../shared/components/Blob'
+import { FadeUp } from '../../shared/components/FadeUp'
+
+interface AboutMeProps {
+  id: string
+}
 
 export const AboutMe = ({ id }: AboutMeProps) => {
   const { t } = useTranslation(RootTranslationKey.ABOUT_ME)
 
   return (
-    <Section id={id} contentClass="bg-secondary-50 justify-between">
-      <div className="flex grow h-full gap-4">
-        <div className="flex flex-col flex-1">
-          <span className="font-title text-primary-700 text-9xl">
-            {t(AboutMeTranslationKey.TITLE)}
-          </span>
-          <span className="font-body text-xl pt-10">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+    <Section id={id} contentClass="section-1 justify-between">
+      <div className="relative flex grow h-full gap-4">
+        <div className="flex flex-col flex-1 text-white">
+          <FadeUp delay={0.1}>
+            <span className="font-title text-9xl">{t(AboutMeTranslationKey.TITLE)}</span>
+          </FadeUp>
+          <FadeUp delay={0.3} className="mt-10">
+            <span className="font-body text-lg">{t(AboutMeTranslationKey.DESCRIPTION)}</span>
+          </FadeUp>
           <div className="flex gap-3 mt-8 flex-wrap">
             {competences.map(competence => (
               <CompetenceBlob
@@ -45,7 +50,6 @@ export const AboutMe = ({ id }: AboutMeProps) => {
           </div>
         </div>
       </div>
-      <PageFooter currentPage={2} position="bottom-0 right-0"></PageFooter>
     </Section>
   )
 }

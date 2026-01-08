@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import { RootTranslationKey, WorkExperienceTranslationKey } from '../../config/translation-keys'
-import { PageFooter } from '../../layout/PageFooter'
 import { Section } from '../../layout/Section'
 import { ExperienceList } from '../../shared/components/ExperienceList'
 import { experienceDetails, experiences } from './data'
@@ -14,10 +13,9 @@ import { Chip } from '../../shared/components/Chip'
 
 interface WorkExpProps {
   id: string
-  page: number
 }
 
-export const WorkExperience = ({ id, page }: WorkExpProps) => {
+export const WorkExperience = ({ id }: WorkExpProps) => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
   const { selectedExperienceId, setSelectedExperience } = useWorkExperience()
 
@@ -54,8 +52,8 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
     <Section
       id={id}
       title={t(WorkExperienceTranslationKey.TITLE)}
-      titleClass="text-white text-12xl"
-      contentClass="bg-accent-500 justify-between"
+      titleClass="text-secondary-200 text-11xl"
+      contentClass="section-3 justify-between"
     >
       <div className="flex grow gap-8">
         <div className="flex-1">
@@ -63,6 +61,8 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
             experiences={experiences}
             selectedExperience={selectedExperienceId}
             onSelectExperience={handleSelectExperience}
+            color="secondary"
+            hover
           ></ExperienceList>
         </div>
         <div className="flex-2">
@@ -78,7 +78,6 @@ export const WorkExperience = ({ id, page }: WorkExpProps) => {
           ) : null}
         </div>
       </div>
-      <PageFooter currentPage={page} position="bottom-0 left-0" justify="start"></PageFooter>
     </Section>
   )
 }

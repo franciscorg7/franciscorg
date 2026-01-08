@@ -1,16 +1,10 @@
-import { PageFooter } from '../../layout/PageFooter'
-import { Section } from '../../layout/Section'
 import { useTranslation } from 'react-i18next'
 import { EducationTranslationKey, RootTranslationKey } from '../../config/translation-keys'
+import { academicExperiences } from '../../features/Education/data'
 import { ExperienceList } from '../../shared/components/ExperienceList'
-import { academicExperiences } from './data'
+import { FadeUp } from '../../shared/components/FadeUp'
 
-export interface EducationProps {
-  id: string
-  page: number
-}
-
-export const Education = ({ id, page }: EducationProps) => {
+export const Education = () => {
   const { t } = useTranslation(RootTranslationKey.EDUCATION)
 
   const experiences = academicExperiences.map(experience => ({
@@ -19,19 +13,17 @@ export const Education = ({ id, page }: EducationProps) => {
   }))
 
   return (
-    <Section
-      id={id}
-      title={t(EducationTranslationKey.TITLE)}
-      titleClass="text-primary-700 text-9xl"
-      contentClass="bg-secondary-100 justify-between"
-    >
-      <div className="flex flex-col grow">
-        <div className="flex-1">test</div>
-        <div className="flex-1 w-1/2">
-          <ExperienceList experiences={experiences}></ExperienceList>
+    <div className="section-2 absolute inset-0 flex flex-col items-center justify-center px-12 pt-8 pb-24 text-white z-0">
+      <span className={`font-title mb-12 w-full text-right text-white text-12xl z-10`}>
+        <FadeUp delay={0.1}>{t(EducationTranslationKey.TITLE)}</FadeUp>
+      </span>
+      <div className="relative flex grow w-full gap-16 z-10">
+        <div className="flex flex-1 items-center justify-center lg:flex"></div>
+        <div className="flex flex-1 flex-col gap-12 justify-center">
+          <span className="text-lg">{t(EducationTranslationKey.DESCRIPTION)}</span>
+          <ExperienceList experiences={experiences} color="white"></ExperienceList>
         </div>
       </div>
-      <PageFooter currentPage={page} position="bottom-0 right-0"></PageFooter>
-    </Section>
+    </div>
   )
 }

@@ -5,9 +5,10 @@ import { Projects } from './features/Projects/Projects'
 import { Skills } from './features/Skills/Skills'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import LocaleWrapper from './layout/LocaleWrapper'
-import { Education } from './features/Education/Education'
-import { WorkExperience } from './features/WorkExperience/WorkExperience'
 import { WorkExperienceProvider } from './features/WorkExperience/context'
+import { CurtainReveal } from './layout/CurtainReveal'
+import { WorkExperience } from './features/WorkExperience/WorkExperience'
+import { Footer } from './features/Footer/Footer'
 
 export function App() {
   return (
@@ -20,13 +21,14 @@ export function App() {
             element={
               <Layout>
                 <Hero id="hero" />
-                <AboutMe id="about-me" page={2}></AboutMe>
+                <AboutMe id="about-me"></AboutMe>
+                <CurtainReveal></CurtainReveal>
                 <WorkExperienceProvider>
-                  <WorkExperience id="career" page={3}></WorkExperience>
+                  <WorkExperience id="work-experience"></WorkExperience>
                 </WorkExperienceProvider>
-                <Skills id="skills" page={4}></Skills>
-                <Education id="education" page={5}></Education>
-                <Projects id="projects" page={6}></Projects>
+                <Skills id="skills"></Skills>
+                <Projects id="projects"></Projects>
+                <Footer></Footer>
               </Layout>
             }
           />

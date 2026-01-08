@@ -21,12 +21,14 @@ interface ExperienceDetailsProps {
 
 export const ExperienceDetails = ({ details }: ExperienceDetailsProps) => {
   return details ? (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 text-secondary-200">
       <span className="tracking-wide text-xl">
         <b>{details.title}</b> | {details.role}
       </span>
-      <span>({details.duration})</span>
-      {details.description && <span>{formatNewLines(details.description)}</span>}
+      <span className="text-lg">({details.duration})</span>
+      {details.description && (
+        <span className="text-lg">{formatNewLines(details.description)}</span>
+      )}
     </div>
   ) : null
 }
