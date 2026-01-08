@@ -15,7 +15,7 @@ export const AboutMe = ({ id }: AboutMeProps) => {
   const { t } = useTranslation(RootTranslationKey.ABOUT_ME)
 
   return (
-    <Section id={id} contentClass="bg-primary-900 justify-between">
+    <Section id={id} contentClass="section-1 justify-between">
       <div className="relative flex grow h-full gap-4">
         <div className="flex flex-col flex-1 text-white">
           <FadeUp delay={0.1}>

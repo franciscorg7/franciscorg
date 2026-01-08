@@ -21,9 +21,9 @@ export const ExperienceList = ({
   onSelectExperience,
 }: ExperienceListProps) => {
   return (
-    <div className="w-full mx-auto">
+    <div className={`w-full mx-auto text-${color}-300`}>
       <div
-        className={`flex flex-col border-y-2 border-${color}-800 divide-y-2 divide-${color}-800`}
+        className={`flex flex-col border-y-2 border-${color}-200 divide-y-2 divide-${color}-200`}
       >
         {experiences?.map(exp => (
           <div
@@ -33,12 +33,12 @@ export const ExperienceList = ({
           >
             <span
               className={`font-bold text-lg uppercase tracking-wide transition-colors duration-300 
-                ${hover ? 'group-hover:text-white' : ''} 
-                ${exp.id === selectedExperience ? 'text-white' : `text-${color}-900`}`}
+                ${hover ? 'group-hover:text-secondary-100' : `text-${color}-300`} 
+                ${exp.id === selectedExperience ? 'text-white' : ''}`}
             >
               {exp.entity}
             </span>
-            <span className={`font-medium text-lg text-${color}-900`}>{exp.year}</span>
+            <span className={`font-medium text-lg text-${color}-300`}>{exp.year}</span>
           </div>
         ))}
       </div>

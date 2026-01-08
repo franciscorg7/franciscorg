@@ -8,6 +8,7 @@ import LocaleWrapper from './layout/LocaleWrapper'
 import { WorkExperienceProvider } from './features/WorkExperience/context'
 import { CurtainReveal } from './layout/CurtainReveal'
 import { WorkExperience } from './features/WorkExperience/WorkExperience'
+import { Footer } from './features/Footer/Footer'
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
                 </WorkExperienceProvider>
                 <Skills id="skills"></Skills>
                 <Projects id="projects"></Projects>
+                <Footer></Footer>
               </Layout>
             }
           />

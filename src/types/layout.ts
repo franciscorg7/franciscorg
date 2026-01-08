@@ -1,3 +1,4 @@
+import type { MotionProps } from 'framer-motion'
 import type { ReactNode } from 'react'
 
 export interface LayoutProps {
@@ -9,5 +10,7 @@ export interface SectionProps {
   title?: string
   titleClass?: string
   contentClass?: string
+  style?: React.CSSProperties
+  motionProps?: MotionProps & { className: string }
   children: ReactNode
 }

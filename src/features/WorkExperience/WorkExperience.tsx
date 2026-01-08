@@ -52,8 +52,8 @@ export const WorkExperience = ({ id }: WorkExpProps) => {
     <Section
       id={id}
       title={t(WorkExperienceTranslationKey.TITLE)}
-      titleClass="text-white text-12xl"
-      contentClass="bg-accent-500 justify-between"
+      titleClass="text-secondary-200 text-11xl"
+      contentClass="section-3 justify-between"
     >
       <div className="flex grow gap-8">
         <div className="flex-1">
@@ -61,6 +61,8 @@ export const WorkExperience = ({ id }: WorkExpProps) => {
             experiences={experiences}
             selectedExperience={selectedExperienceId}
             onSelectExperience={handleSelectExperience}
+            color="secondary"
+            hover
           ></ExperienceList>
         </div>
         <div className="flex-2">

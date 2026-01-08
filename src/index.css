@@ -12,6 +12,9 @@
   --color-primary-700: #006daa;
   --color-primary-800: #055987;
   --color-primary-900: #0a4a70;
+  --color-primary-912: #094467;
+  --color-primary-925: #093d5d;
+  --color-primary-937: #083654;
   --color-primary-950: #072f4a;
 
   --color-accent-50: #fff4ed;
@@ -38,6 +41,8 @@
   --color-secondary-900: #3f3e3b;
   --color-secondary-950: #2a2a27;
 
+  --color-sand-500: #e6d5b8;
+
   --text-10xl: 9rem;
   --text-10xl--line-height: 1;
   --text-11xl: 10rem;
@@ -55,5 +60,31 @@
 
   .font-body {
     font-family: var(--tw-font-body, 'Outfit', 'sans-serif');
+  }
+}
+
+@layer components {
+  .section-1 {
+    background: linear-gradient(180deg, #0a4a70 0%, #094569 100%);
+  }
+
+  .section-2 {
+    background: linear-gradient(180deg, #094569 0%, #093f62 100%);
+  }
+
+  .section-3 {
+    background: linear-gradient(180deg, #093f62 0%, #083a5b 100%);
+  }
+
+  .section-4 {
+    background: linear-gradient(180deg, #083a5b 0%, #083453 100%);
+  }
+
+  .section-5 {
+    background: linear-gradient(180deg, #083453 0%, #072f4a 100%);
+  }
+
+  .section-sand {
+    background: linear-gradient(180deg, #dfcbac 0%, #d9b99b 100%);
   }
 }
