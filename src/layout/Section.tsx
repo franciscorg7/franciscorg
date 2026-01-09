@@ -15,7 +15,7 @@ export const Section = ({
   return (
     <section
       key={id}
-      className={`relative font-body min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
+      className={`relative perspective-1200 font-body min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
       style={style}
     >
       {title && (

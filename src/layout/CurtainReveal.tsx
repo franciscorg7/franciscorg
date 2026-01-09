@@ -29,12 +29,12 @@ export const CurtainReveal = () => {
       <div ref={targetRef} className="relative h-[450vh] bg-neutral-900 font-body">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <Education></Education>
-          <motion.div className="absolute h-full w-full px-12 pt-8 pb-24 flex flex-col items-center justify-center bg-primary-900 text-white z-10">
+          <motion.div className="absolute h-full w-full px-12 pt-8 flex flex-col items-center justify-center bg-primary-900 text-white z-10">
             <Education></Education>
           </motion.div>
           <motion.div
             style={{ x: slide2X }}
-            className="absolute inset-0 h-full w-full px-12 pt-8 pb-24 flex flex-col items-center justify-center bg-white text-primary-900 z-20 shadow-2xl"
+            className="absolute inset-0 h-full w-full px-12 pt-8 flex flex-col items-center justify-center bg-white text-primary-900 z-20 shadow-2xl"
           >
             <Certifications></Certifications>
           </motion.div>

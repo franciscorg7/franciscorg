@@ -6,6 +6,7 @@ import { competences, NAME_LABEL } from './data'
 import { MotionElement, motionsConfig } from '../../config/motion'
 import { Emerging } from '../../shared/motions/Emerging'
 import { SkillBadge } from '../../shared/components/SkillBadge'
+import { GlassCard } from '../../shared/components/GlassCard'
 
 interface AboutMeProps {
   id: string
@@ -20,40 +21,52 @@ export const AboutMe = ({ id }: AboutMeProps) => {
 
   return (
     <Section id={id} contentClass="section-1 py-20 flex justify-center items-center">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
-        <Emerging
-          {...titleMotionConfig}
-          className="glassy-card lg:col-span-2 p-10 flex flex-col justify-end min-h-[400px]"
-        >
-          <span className="font-title text-7xl md:text-9xl text-white mb-6">
+      <div className="flex flex-col gap-6 w-full max-w-7xl px-4 mx-auto">
+        {/* ROW 1: Full-width Title */}
+        <Emerging {...titleMotionConfig}>
+          <h2 className="font-title text-7xl md:text-11xl text-white text-center uppercase tracking-tighter leading-none w-full">
             {t(AboutMeTranslationKey.TITLE)}
-          </span>
-          <span className="font-body text-lg text-white/70 max-w-xl">
-            {t(AboutMeTranslationKey.DESCRIPTION)}
-          </span>
+          </h2>
         </Emerging>
-        <Emerging
-          {...imgMotionConfig}
-          className="glassy-card lg:row-span-2 relative group overflow-hidden"
-        >
-          <img
-            src={profile}
-            alt="profile picture"
-            className="grayscale w-full h-full object-cover transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-          />
-          <div className="absolute bottom-6 left-6 bg-white/60 px-6 py-3 rounded-lg shadow-xl">
-            <span className="text-primary-950 font-bold uppercase tracking-widest text-sm">
-              {NAME_LABEL}
-            </span>
+
+        {/* ROW 2: Two Columns */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+          {/* Left Column: Stacked Text and Keywords (2/3 width) */}
+          <div className="lg:col-span-2 flex flex-col gap-6">
+            <Emerging className="flex-1">
+              <GlassCard className="p-10 flex flex-col justify-center h-full">
+                <p className="font-body text-xl text-white/80 leading-relaxed max-w-2xl">
+                  {t(AboutMeTranslationKey.DESCRIPTION)}
+                </p>
+              </GlassCard>
+            </Emerging>
+
+            <Emerging {...keywordsMotionConfig}>
+              <GlassCard className="p-8">
+                <div className="flex gap-3 flex-wrap">
+                  {competences.map(competence => (
+                    <SkillBadge key={competence.id} label={t(competence.translationKey)} />
+                  ))}
+                </div>
+              </GlassCard>
+            </Emerging>
           </div>
-        </Emerging>
-        <Emerging {...keywordsMotionConfig} className="glassy-card lg:col-span-2 p-8">
-          <div className="flex gap-3 flex-wrap">
-            {competences.map(competence => (
-              <SkillBadge key={competence.id} label={t(competence.translationKey)} />
-            ))}
-          </div>
-        </Emerging>
+
+          <Emerging {...imgMotionConfig} className="h-full">
+            <GlassCard className="relative group overflow-hidden h-full min-h-[500px]">
+              <img
+                src={profile}
+                alt="profile picture"
+                className="grayscale w-full h-full object-cover transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+              />
+              <div className="absolute bottom-6 left-6 bg-white/60 backdrop-blur-md px-6 py-3 rounded-lg shadow-xl z-30">
+                <span className="text-primary-950 font-bold uppercase tracking-widest text-sm">
+                  {NAME_LABEL}
+                </span>
+              </div>
+            </GlassCard>
+          </Emerging>
+        </div>
       </div>
     </Section>
   )

@@ -8,6 +8,11 @@ export const MotionElement = {
 
   EDUCATION_TITLE: 'education-title',
   EDUCATION_TEXT: 'education-text',
+  EDUCATION_LIST: 'education-list',
+
+  WORK_EXPERIENCE_TITLE: 'work-experience-title',
+  WORK_EXPERIENCE_LIST: 'work-experience-list',
+  WORK_EXPERIENCE_TEXT: 'work-experience-text',
 
   PROJECTS_TITLE: 'projects-title',
   PROJECTS_WINDOW: 'projects-window',
@@ -104,28 +109,6 @@ export const motionsConfig: Record<MotionElementType, MotionProps> = {
       },
     },
   },
-  [MotionElement.PROJECTS_TITLE]: {
-    initial: 'hidden',
-    whileInView: 'visible',
-    viewport: { once: false, amount: 0.3 },
-    variants: {
-      hidden: {
-        opacity: 0.3,
-        scale: 0.8,
-        y: 20,
-        transition: { duration: 2, ease: 'easeIn' },
-      },
-      visible: {
-        opacity: 0.8,
-        scale: 1,
-        y: 0,
-        transition: {
-          duration: 2.5,
-          ease: 'easeOut',
-        },
-      },
-    },
-  },
   [MotionElement.EDUCATION_TITLE]: {
     initial: 'hidden',
     whileInView: 'visible',
@@ -149,6 +132,116 @@ export const motionsConfig: Record<MotionElementType, MotionProps> = {
     },
   },
   [MotionElement.EDUCATION_TEXT]: {
+    initial: 'hidden',
+    whileInView: 'visible',
+    viewport: { once: false, amount: 0.3 },
+    variants: {
+      hidden: {
+        opacity: 0.3,
+        scale: 0.8,
+        y: 20,
+        transition: { duration: 2, ease: 'easeIn' },
+      },
+      visible: {
+        opacity: 0.8,
+        scale: 1,
+        y: 0,
+        transition: {
+          duration: 2.5,
+          ease: 'easeOut',
+        },
+      },
+    },
+  },
+  [MotionElement.EDUCATION_LIST]: {
+    initial: 'hidden',
+    whileInView: 'visible',
+    viewport: { once: false, amount: 0.3 },
+    variants: {
+      hidden: {
+        opacity: 0.3,
+        scale: 0.8,
+        y: 20,
+        transition: { duration: 2, ease: 'easeIn' },
+      },
+      visible: {
+        opacity: 0.8,
+        scale: 1,
+        y: 0,
+        transition: {
+          duration: 2.5,
+          ease: 'easeOut',
+        },
+      },
+    },
+  },
+  [MotionElement.WORK_EXPERIENCE_TITLE]: {
+    initial: 'hidden',
+    whileInView: 'visible',
+    viewport: { once: false, amount: 0.3 },
+    variants: {
+      hidden: {
+        opacity: 0.3,
+        scale: 0.8,
+        y: 20,
+        transition: { duration: 2, ease: 'easeIn' },
+      },
+      visible: {
+        opacity: 0.8,
+        scale: 1,
+        y: 0,
+        transition: {
+          duration: 2.5,
+          ease: 'easeOut',
+        },
+      },
+    },
+  },
+  [MotionElement.WORK_EXPERIENCE_TEXT]: {
+    initial: 'hidden',
+    whileInView: 'visible',
+    viewport: { once: false, amount: 0.3 },
+    variants: {
+      hidden: {
+        opacity: 0.3,
+        scale: 0.8,
+        y: 20,
+        transition: { duration: 2, ease: 'easeIn' },
+      },
+      visible: {
+        opacity: 0.8,
+        scale: 1,
+        y: 0,
+        transition: {
+          duration: 2.5,
+          ease: 'easeOut',
+        },
+      },
+    },
+  },
+  [MotionElement.WORK_EXPERIENCE_LIST]: {
+    initial: 'hidden',
+    whileInView: 'visible',
+    viewport: { once: false, amount: 0.3 },
+    variants: {
+      hidden: {
+        opacity: 0.3,
+        scale: 0.8,
+        y: 20,
+        transition: { duration: 2, ease: 'easeIn' },
+      },
+      visible: {
+        opacity: 0.8,
+        scale: 1,
+        y: 0,
+        transition: {
+          duration: 2.5,
+          ease: 'easeOut',
+        },
+      },
+    },
+  },
+  [MotionElement.PROJECTS_TITLE]: {
     initial: 'hidden',
     whileInView: 'visible',
     viewport: { once: false, amount: 0.3 },
