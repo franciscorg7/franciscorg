@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import type { SectionProps } from '../types/layout'
 
 export const Section = ({
-  id,
+  ref,
   title,
   titleClass = 'text-9xl text-white',
   contentClass,
@@ -14,7 +14,7 @@ export const Section = ({
 
   return (
     <section
-      key={id}
+      ref={ref}
       className={`relative perspective-1200 font-body min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
       style={style}
     >

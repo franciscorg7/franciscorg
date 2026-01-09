@@ -20,7 +20,7 @@ export const CurtainReveal = () => {
 
   const slide2X = useTransform(
     smoothScroll,
-    [0, 0.01, 0.5, 0.99, 1],
+    [0, 0.3, 0.6, 0.9, 1],
     ['100%', '100%', '0%', '100%', '100%']
   )
 

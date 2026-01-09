@@ -1,12 +1,12 @@
 import type { MotionProps } from 'framer-motion'
-import type { ReactNode } from 'react'
+import type { ReactNode, RefObject } from 'react'
 
 export interface LayoutProps {
   children: ReactNode
 }
 
 export interface SectionProps {
-  id: string
+  ref?: RefObject<HTMLDivElement | null>
   title?: string
   titleClass?: string
   contentClass?: string

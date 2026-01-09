@@ -8,11 +8,7 @@ import { Emerging } from '../../shared/motions/Emerging'
 import { SkillBadge } from '../../shared/components/SkillBadge'
 import { GlassCard } from '../../shared/components/GlassCard'
 
-interface AboutMeProps {
-  id: string
-}
-
-export const AboutMe = ({ id }: AboutMeProps) => {
+export const AboutMe = () => {
   const { t } = useTranslation(RootTranslationKey.ABOUT_ME)
 
   const titleMotionConfig = motionsConfig[MotionElement.ABOUT_ME_TITLE]
@@ -20,7 +16,7 @@ export const AboutMe = ({ id }: AboutMeProps) => {
   const imgMotionConfig = motionsConfig[MotionElement.ABOUT_ME_IMAGE]
 
   return (
-    <Section id={id} contentClass="section-1 py-20 flex justify-center items-center">
+    <Section contentClass="section-1 py-20 flex justify-center items-center">
       <div className="flex flex-col gap-6 w-full max-w-7xl px-4 mx-auto">
         {/* ROW 1: Full-width Title */}
         <Emerging {...titleMotionConfig}>

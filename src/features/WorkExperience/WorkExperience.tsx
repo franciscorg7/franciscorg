@@ -8,17 +8,14 @@ import {
   type ExperienceItemDetails,
 } from '../../shared/components/ExperienceDetails'
 import { useWorkExperience } from './context'
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { Chip } from '../../shared/components/Chip'
 import { Emerging } from '../../shared/motions/Emerging'
 import { GlassCard } from '../../shared/components/GlassCard'
 import { MotionElement, motionsConfig } from '../../config/motion'
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 
-interface WorkExpProps {
-  id: string
-}
-
-export const WorkExperience = ({ id }: WorkExpProps) => {
+export const WorkExperience = () => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
   const { selectedExperienceId, setSelectedExperience } = useWorkExperience()
 
@@ -56,18 +53,44 @@ export const WorkExperience = ({ id }: WorkExpProps) => {
   const textMotion = motionsConfig[MotionElement.WORK_EXPERIENCE_TEXT]
   const listMotion = motionsConfig[MotionElement.WORK_EXPERIENCE_LIST]
 
+  const containerRef = useRef(null)
+
+  // Keep track of scroll progress within the Work Experience section
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  })
+
+  // Title moves down (background layer feel)
+  const yTitle = useTransform(scrollYProgress, [0, 1], [-80, 80])
+
+  // Cards move up (foreground layer feel)
+  const yCards = useTransform(scrollYProgress, [0, 1], [120, -120])
+
+  // Smooth out the motion so it doesn't feel sitff
+  const smoothYTitle = useSpring(yTitle, { stiffness: 100, damping: 30 })
+  const smoothYCards = useSpring(yCards, { stiffness: 100, damping: 30 })
+
   return (
-    <Section id={id} contentClass="section-3 justify-between">
+    <Section
+      ref={containerRef}
+      contentClass="section-3 py-48 md:py-64 flex flex-col justify-center overflow-hidden"
+    >
       <div className="flex flex-col gap-6 w-full max-w-7xl px-4 mx-auto">
-        <Emerging
-          {...titleMotion}
-          className="w-full p-10 md:p-16 flex items-center justify-center overflow-hidden"
+        <motion.div style={{ y: smoothYTitle }}>
+          <Emerging
+            {...titleMotion}
+            className="w-full p-10 md:p-16 flex items-center justify-center overflow-hidden"
+          >
+            <h2 className="font-title text-7xl md:text-11xl text-secondary-200 text-center uppercase tracking-tighter wrap-break-word leading-none">
+              {t(WorkExperienceTranslationKey.TITLE)}
+            </h2>
+          </Emerging>
+        </motion.div>
+        <motion.div
+          style={{ y: smoothYCards }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch"
         >
-          <h2 className="font-title text-7xl md:text-11xl text-secondary-200 text-center uppercase tracking-tighter wrap-break-word leading-none">
-            {t(WorkExperienceTranslationKey.TITLE)}
-          </h2>
-        </Emerging>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           <Emerging {...listMotion}>
             <GlassCard className="p-8 flex flex-1 flex-col h-full">
               <ExperienceList
@@ -98,7 +121,7 @@ export const WorkExperience = ({ id }: WorkExpProps) => {
               )}
             </GlassCard>
           </Emerging>
-        </div>
+        </motion.div>
       </div>
     </Section>
   )
