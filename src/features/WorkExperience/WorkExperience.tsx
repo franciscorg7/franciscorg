@@ -13,7 +13,7 @@ import { Chip } from '../../shared/components/Chip'
 import { Emerging } from '../../shared/motions/Emerging'
 import { GlassCard } from '../../shared/components/GlassCard'
 import { MotionElement, motionsConfig } from '../../config/motion'
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useSpring, useTransform } from 'framer-motion'
 
 export const WorkExperience = () => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
@@ -103,22 +103,31 @@ export const WorkExperience = () => {
             </GlassCard>
           </Emerging>
           <Emerging {...textMotion}>
-            <GlassCard className="p-10 flex flex-col h-full min-h-[400px]">
-              {details ? (
-                <div className="flex flex-col h-full">
-                  <ExperienceDetails details={details} />
-
-                  <div className="flex flex-wrap gap-2 mt-auto pt-8">
-                    {details?.keywords?.map((keyword, idx) => (
-                      <Chip key={idx} className={keyword.className} label={keyword.text} />
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center justify-center h-full text-white/20 uppercase font-title">
-                  Sem experiência selecionada.
-                </div>
-              )}
+            <GlassCard className="p-10 flex flex-col h-full min-h-[400px] overflow-hidden">
+              <motion.div
+                layout
+                transition={{
+                  layout: { type: 'spring', stiffness: 200, damping: 30 },
+                }}
+                className="flex flex-col h-full"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={selectedExperienceId}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ExperienceDetails details={details} />
+                    <motion.div layout className="flex flex-wrap gap-2 mt-auto pt-8">
+                      {details?.keywords?.map((keyword, idx) => (
+                        <Chip key={idx} className={keyword.className} label={keyword.text} />
+                      ))}
+                    </motion.div>
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
             </GlassCard>
           </Emerging>
         </motion.div>

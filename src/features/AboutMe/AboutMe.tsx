@@ -11,6 +11,7 @@ import { GlassCard } from '../../shared/components/GlassCard'
 export const AboutMe = () => {
   const { t } = useTranslation(RootTranslationKey.ABOUT_ME)
 
+  // Motion configurations for each subsection
   const titleMotionConfig = motionsConfig[MotionElement.ABOUT_ME_TITLE]
   const keywordsMotionConfig = motionsConfig[MotionElement.ABOUT_ME_KEYWORDS]
   const imgMotionConfig = motionsConfig[MotionElement.ABOUT_ME_IMAGE]
@@ -18,16 +19,13 @@ export const AboutMe = () => {
   return (
     <Section contentClass="section-1 py-20 flex justify-center items-center">
       <div className="flex flex-col gap-6 w-full max-w-7xl px-4 mx-auto">
-        {/* ROW 1: Full-width Title */}
         <Emerging {...titleMotionConfig}>
           <h2 className="font-title text-7xl md:text-11xl text-white text-center uppercase tracking-tighter leading-none w-full">
             {t(AboutMeTranslationKey.TITLE)}
           </h2>
         </Emerging>
 
-        {/* ROW 2: Two Columns */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-          {/* Left Column: Stacked Text and Keywords (2/3 width) */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             <Emerging className="flex-1">
               <GlassCard className="p-10 flex flex-col justify-center h-full">
