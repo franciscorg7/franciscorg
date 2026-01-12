@@ -122,7 +122,19 @@ export const WorkExperience = () => {
                     <ExperienceDetails details={details} />
                     <motion.div layout className="flex flex-wrap gap-2 mt-auto pt-8">
                       {details?.keywords?.map((keyword, idx) => (
-                        <Chip key={idx} className={keyword.className} label={keyword.text} />
+                        <motion.div
+                          key={`${selectedExperienceId}-${idx}`}
+                          initial={{ opacity: 0, scale: 0.6 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            delay: idx * 0.15,
+                            type: 'spring',
+                            stiffness: 260,
+                            damping: 20,
+                          }}
+                        >
+                          <Chip className={keyword.className} label={keyword.text} />
+                        </motion.div>
                       ))}
                     </motion.div>
                   </motion.div>

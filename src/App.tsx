@@ -6,9 +6,9 @@ import { Skills } from './features/Skills/Skills'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import LocaleWrapper from './layout/LocaleWrapper'
 import { WorkExperienceProvider } from './features/WorkExperience/context'
-import { CurtainReveal } from './layout/CurtainReveal'
 import { WorkExperience } from './features/WorkExperience/WorkExperience'
 import { Footer } from './features/Footer/Footer'
+import { Education } from './features/Education/Education'
 
 export function App() {
   return (
@@ -20,11 +20,11 @@ export function App() {
             index
             element={
               <Layout>
-                <Hero id="hero" />
-                <AboutMe id="about-me"></AboutMe>
-                <CurtainReveal></CurtainReveal>
+                <Hero />
+                <AboutMe></AboutMe>
+                <Education></Education>
                 <WorkExperienceProvider>
-                  <WorkExperience id="work-experience"></WorkExperience>
+                  <WorkExperience></WorkExperience>
                 </WorkExperienceProvider>
                 <Skills id="skills"></Skills>
                 <Projects id="projects"></Projects>
