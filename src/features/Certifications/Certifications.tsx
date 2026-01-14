@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { EducationTranslationKey, RootTranslationKey } from '../../config/translation-keys'
 import { Section } from '../../layout/Section'
 import { CertificationCard } from '../../shared/components/CertificationCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAws } from '@fortawesome/free-brands-svg-icons'
+import { faLanguage } from '@fortawesome/free-solid-svg-icons'
 
 export const Certifications = () => {
   const { t } = useTranslation(RootTranslationKey.EDUCATION)
@@ -19,7 +22,6 @@ export const Certifications = () => {
     },
   }
 
-  // 2. Card Variants: High-quality Spring physics
   const cardVariants: Variants = {
     hidden: {
       y: 40,
@@ -32,9 +34,9 @@ export const Certifications = () => {
       scale: 1,
       transition: {
         type: 'spring',
-        stiffness: 70, // Lower stiffness for a "softer" feel
-        damping: 15, // Prevents excessive bouncing
-        mass: 1, // Physical weight of the element
+        stiffness: 70,
+        damping: 15,
+        mass: 1,
       },
     },
   }
@@ -42,7 +44,6 @@ export const Certifications = () => {
   return (
     <Section contentClass="py-20 flex justify-center items-center min-h-screen">
       <div className="flex flex-col gap-12 w-full max-w-5xl px-4 mx-auto">
-        {/* Title: Simple fade and slight slide up */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,18 +56,17 @@ export const Certifications = () => {
           </h2>
         </motion.div>
 
-        {/* Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }} // Triggers when 30% of the grid is visible
+          viewport={{ once: true, amount: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full"
         >
           <CertificationCard
             variants={cardVariants}
             variantColor="blue"
-            badge="C1"
+            badge={<FontAwesomeIcon icon={faLanguage} />}
             category="Language Proficiency"
             title="English C1"
             description="Cambridge Assessment English: Advanced (CAE)"
@@ -76,11 +76,7 @@ export const Certifications = () => {
           <CertificationCard
             variants={cardVariants}
             variantColor="orange"
-            badge={
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            }
+            badge={<FontAwesomeIcon icon={faAws} />}
             category="Cloud Computing"
             title="AWS Cloud Practitioner"
             description="Foundational knowledge of AWS Cloud platform and infrastructure."

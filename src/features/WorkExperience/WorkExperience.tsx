@@ -7,8 +7,7 @@ import {
   ExperienceDetails,
   type ExperienceItemDetails,
 } from '../../shared/components/ExperienceDetails'
-import { useWorkExperience } from './context'
-import { useEffect, useMemo, useRef } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { Chip } from '../../shared/components/Chip'
 import { Emerging } from '../../shared/motions/Emerging'
 import { GlassCard } from '../../shared/components/GlassCard'
@@ -17,14 +16,9 @@ import { AnimatePresence, motion, useScroll, useSpring, useTransform } from 'fra
 
 export const WorkExperience = () => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
-  const { selectedExperienceId, setSelectedExperience } = useWorkExperience()
-
-  useEffect(() => {
-    // Set initial selected experience
-    if (!selectedExperienceId && experiences.length > 0) {
-      setSelectedExperience(experiences[0].id)
-    }
-  }, [selectedExperienceId, setSelectedExperience])
+  const [selectedExperienceId, setSelectedExperienceId] = useState<string | null>(
+    experiences[0]?.id || null
+  )
 
   const translatedDetails = useMemo(
     () =>
@@ -45,7 +39,7 @@ export const WorkExperience = () => {
    * @param id - the selected experience id.
    */
   const handleSelectExperience = (id: string) => {
-    setSelectedExperience(id)
+    setSelectedExperienceId(id)
   }
 
   // Motion configurations for each subsection
@@ -103,7 +97,7 @@ export const WorkExperience = () => {
             </GlassCard>
           </Emerging>
           <Emerging {...textMotion}>
-            <GlassCard className="p-10 flex flex-col h-full min-h-[400px] overflow-hidden">
+            <GlassCard className="p-10 flex flex-col h-full min-h-100 overflow-hidden">
               <motion.div
                 layout
                 transition={{
