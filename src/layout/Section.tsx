@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import type { SectionProps } from '../types/layout'
+import { cn } from '../utils/cn'
 
 export const Section = ({
   ref,
@@ -15,11 +16,14 @@ export const Section = ({
   return (
     <section
       ref={ref}
-      className={`relative perspective-1200 font-body min-h-screen flex flex-col px-12 pt-8 pb-24 ${contentClass}`}
+      className={cn(
+        'relative perspective-1200 font-body min-h-screen flex flex-col px-12 pt-8 pb-24',
+        contentClass
+      )}
       style={style}
     >
       {title && (
-        <span className={`font-title mb-12 z-20 ${titleClass}`}>
+        <span className={cn('font-title mb-12 z-20', titleClass)}>
           {motionProps ? (
             <motion.div
               initial={initial}
