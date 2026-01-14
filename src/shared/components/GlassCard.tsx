@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion'
+import { cn } from '../../utils/cn'
 
 export const GlassCard = ({
   children,
@@ -80,7 +81,7 @@ export const GlassCard = ({
           rotateY,
           transformStyle: 'preserve-3d',
         }}
-        className={`glassy-card relative h-full w-full isolation-isolate ${className}`}
+        className={cn('glassy-card relative h-full w-full isolation-isolate', className)}
       >
         <motion.div
           style={{ background: glareBg, opacity: glareOpacity }}
