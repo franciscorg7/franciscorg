@@ -14,6 +14,7 @@ import { Emerging } from '../../shared/motions/Emerging'
 import { GlassCard } from '../../shared/components/GlassCard'
 import { MotionElement, motionsConfig } from '../../config/motion'
 import { AnimatePresence, motion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { cn } from '../../utils/cn'
 
 export const WorkExperience = () => {
   const { t } = useTranslation(RootTranslationKey.WORK_EXP)
@@ -82,7 +83,12 @@ export const WorkExperience = () => {
             {...titleMotion}
             className="w-full p-10 md:p-16 flex items-center justify-center overflow-hidden"
           >
-            <h2 className="font-title text-7xl md:text-11xl text-secondary-200 text-center uppercase tracking-tighter wrap-break-word leading-none">
+            <h2
+              className={cn(
+                'font-title text-7xl md:text-11xl text-secondary-200',
+                'text-center uppercase tracking-tighter wrap-break-word leading-none'
+              )}
+            >
               {t(WorkExperienceTranslationKey.TITLE)}
             </h2>
           </Emerging>
